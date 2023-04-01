@@ -1,0 +1,76 @@
+@import "./fonts.scss";
+@import "./base.scss";
+
+#app {
+  max-width: 1344px;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template: minmax(1000px, auto) 1fr minmax(360px, auto) / 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-template: minmax(762px, auto) 1fr minmax(360px, auto) / 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template: minmax(572px, auto) 1fr minmax(360px, auto) / 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  @media (max-width: 500px) {
+    display: grid;
+    grid-template: minmax(698px, auto) 1fr minmax(430px, auto) / 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  @media (max-width: 320px) {
+    display: grid;
+    grid-template: minmax(520px, auto) 1fr minmax(430px, auto) / 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+}
+
+.header {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.header,
+.about,
+.concept,
+.guides,
+.mission,
+.opportunities,
+.product,
+.team {
+  margin-bottom: var(--section-gap);
+  @media screen and (max-width: 768px) {
+    margin-bottom: 132px;
+  }
+  @media screen and (max-width: 500px) {
+    margin-bottom: 80px;
+  }
+}
