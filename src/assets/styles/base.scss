@@ -146,6 +146,7 @@ p {
   line-height: 32px;
   text-align: left;
   @media screen and (max-width: 1024px) {
+    font-size: 17px;
     line-height: 24px;
   }
 }
@@ -163,5 +164,6 @@ p {
   @media screen and (max-width: 767px) {
     font-size: 17px;
     line-height: 24px;
+    text-align: left;
   }
 }
