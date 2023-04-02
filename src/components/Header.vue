@@ -9,8 +9,6 @@
             alt="Tipster logo"
             class="header__navbar_logo"
             src="../assets/images/logo.svg"
-            width="134"
-            height="32"
           />
         </a>
       </div>
@@ -23,116 +21,116 @@
         </div>
       </div>
     </nav>
-
-    <h1 class="header__title">
-      Работа <br />
-      в Tripster
-    </h1>
     <div class="header__content">
-      Сервис онлайн-бронирования необычных экскурсий от местных жителей по всему
-      миру
+      <h1>
+        Работа <br />
+        в Tripster
+      </h1>
+      <p class="content-text">
+        Сервис онлайн-бронирования необычных экскурсий от местных жителей по
+        всему миру
+      </p>
     </div>
   </header>
 </template>
 
 <style lang="scss" scoped>
 .header {
-  //Основной
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
+  grid-template: minmax(80px, auto) 1fr/ 1fr;
   background: url(../assets/images/bg_image_1.png), #231e1b;
   background-size: cover;
   border-radius: 0px 0px 80px 80px;
-  padding: 0 1.5rem;
-  @media screen and (min-width: 1344px) {
-    //Большие экраны
-    padding: 0 3.75rem;
+  padding: 2rem 1.5rem 0;
+  @media screen and (min-width: 1345px) {
+    padding: 2rem 3.75rem 0;
   }
-
-  @media screen and (max-width: 1024px) {
-    //Таблетка
-  }
-  @media screen and (max-width: 768px) {
-    //Таблетка вeртикально
-  }
-
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 767px) {
+    grid-template: minmax(56px, auto) 1fr/ 1fr;
     background: url(../assets/images/bg_image_1_mobile.png), #231e1b;
     background-size: cover;
     border-radius: 0px 0px 24px 24px;
-    padding: 0 1rem;
-    //Мобильник
+    padding: 1rem 1rem 0;
   }
-  @media screen and (max-width: 320px) {
-    //Мобильник маленький
-  }
+
   &__navbar {
     display: flex;
-    top: 0;
-    flex-direction: row;
-    width: 100%;
     justify-content: space-between;
     align-items: center;
-    margin: 2rem auto 2.5rem;
-    @media screen and (max-width: 768px) {
-      margin: 1.5rem auto 2rem;
-    }
-    @media screen and (max-width: 500px) {
-      margin: 1rem auto 2rem;
-    }
     &_logo {
-      display: flex;
-      align-items: center;
+      display: block;
+      cursor: pointer;
+      img {
+        height: 32px;
+        @media screen and (max-width: 767px) {
+          height: 20px;
+        }
+      }
     }
     &_menu {
-      display: flex;
-      align-items: center;
-      right: 0;
+      display: inline-flex;
       div {
-        padding: 12px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 12px;
         color: var(--color-black);
         background-color: #00000012;
         backdrop-filter: blur(15px);
         border-radius: 100px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @media screen and (max-width: 767px) {
+          padding: 13.33px 10px;
+        }
         cursor: pointer;
         img {
           width: 24px;
-          height: 24px;
+          height: 16px;
+          @media screen and (max-width: 767px) {
+            width: 20px;
+            height: 13.33px;
+          }
         }
       }
       div:first-of-type {
-        margin-right: 0.5rem;
-        font-family: "MuseoSansCyrl-500", sans-serif;
+        font-family: "MuseoSansCyrl-300", sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 24px;
         text-align: center;
+        margin-right: 0.5rem;
         padding: 12px 32px;
+        @media screen and (max-width: 767px) {
+          font-size: 14px;
+          line-height: 20px;
+          padding: 10px 16px;
+        }
       }
     }
   }
   &__content {
-    margin-top: 1rem;
-    font-family: "MuseoSansCyrl-500", sans-serif;
-    color: var(--color-white);
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 24px;
-    max-width: 400px;
-    @media screen and (min-width: 1344px) {
-      font-size: 24px;
-      line-height: 32px;
+    margin-top: 2.5rem;
+    max-width: 600px;
+    p {
+      margin-top: 1rem;
+      font-family: "MuseoSansCyrl-300", sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 24px;
+      color: var(--color-white);
+      text-align: left;
+      @media screen and (max-width: 1024px) {
+        margin-top: 0.5rem;
+      }
+      @media screen and (max-width: 767px) {
+        color: var(--color-black);
+      }
     }
     @media screen and (max-width: 1024px) {
-      margin-top: 0.5rem;
-      max-width: 286px;
+      max-width: 400px;
     }
-    @media screen and (max-width: 500px) {
-      color: var(--color-black);
+    @media screen and (max-width: 767px) {
+      margin-top: 2rem;
       max-width: 260px;
     }
   }
