@@ -7,38 +7,14 @@
   height: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template: minmax(1000px, auto) 1fr minmax(360px, auto) / 1fr;
+  grid-template: minmax(100vh, auto) 1fr minmax(360px, auto) / 1fr;
   grid-template-areas:
     "header"
     "main"
     "footer";
-  @media (max-width: 1024px) {
+  @media (max-width: 767px) {
     display: grid;
-    grid-template: minmax(762px, auto) 1fr minmax(360px, auto) / 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
-  @media (max-width: 768px) {
-    display: grid;
-    grid-template: minmax(572px, auto) 1fr minmax(360px, auto) / 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
-  @media (max-width: 500px) {
-    display: grid;
-    grid-template: minmax(698px, auto) 1fr minmax(430px, auto) / 1fr;
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
-  @media (max-width: 320px) {
-    display: grid;
-    grid-template: minmax(520px, auto) 1fr minmax(430px, auto) / 1fr;
+    grid-template: minmax(100vh, auto) 1fr minmax(160px, auto) / 1fr;
     grid-template-areas:
       "header"
       "main"
@@ -58,19 +34,16 @@
   grid-area: footer;
 }
 
-.header,
 .about,
 .concept,
 .guides,
 .mission,
 .opportunities,
 .product,
-.team {
-  margin-bottom: var(--section-gap);
-  @media screen and (max-width: 768px) {
-    margin-bottom: 132px;
-  }
-  @media screen and (max-width: 500px) {
-    margin-bottom: 80px;
+.team,
+.footer {
+  margin-top: var(--section-gap);
+  @media screen and (max-width: 767px) {
+    margin-top: var(--section-gap-mobile);
   }
 }

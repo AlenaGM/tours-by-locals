@@ -1,37 +1,31 @@
+ШРИФТЫ
+"MuseoSansCyrl-300", sans-serif;
 "MuseoSansCyrl-500", sans-serif;
 "MuseoSansCyrl-700", sans-serif;
 "MuseoSansCyrl-900", sans-serif;
 
-
+РАЗМЕРЫ
 //Основной
-
-  @media screen and (min-width: 1344px) {
+//1344-1025px
+  @media screen and (min-width: 1345px) {
     //Большие экраны
   }
 
   @media screen and (max-width: 1024px) {
     //Таблетка
   }
-  @media screen and (max-width: 768px) {
-    //Таблетка вeртикально
+  @media screen and (max-width: 767px) {
+    ////Мобильник
   }
+    //min-width320px
 
-  @media screen and (max-width: 500px) {
-    //Мобильник
-  }
-
-  @media screen and (max-width: 320px) {
-
-    //Мобильник маленький
-  }
-
-  /* PADDING
+ПАДДИНГИ
 padding: 0 1.5rem;
   @media screen and (min-width: 1344px) {
     //Большие экраны
     padding: 0 3.75rem;
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 767px) {
     padding: 0 1rem;
     //Мобильник
   }
