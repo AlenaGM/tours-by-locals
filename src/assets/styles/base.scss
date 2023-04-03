@@ -145,9 +145,15 @@ p {
   font-weight: 400;
   line-height: 32px;
   text-align: left;
+  &:not(:last-of-type) {
+    padding-bottom: 24px;
+  }
   @media screen and (max-width: 1024px) {
     font-size: 17px;
     line-height: 24px;
+    &:not(:last-of-type) {
+      padding-bottom: 17px;
+    }
   }
 }
 
