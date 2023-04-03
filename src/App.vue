@@ -1,5 +1,6 @@
 <script setup>
 import About from "./components/About.vue";
+import Aliens from "./components/Aliens.vue";
 import Concept from "./components/Concept.vue";
 import Footer from "./components/Footer.vue";
 import Guides from "./components/Guides.vue";
@@ -17,6 +18,7 @@ import Team from "./components/Team.vue";
     <Mission />
     <Product />
     <Guides />
+    <Aliens />
     <Opportunities />
     <Team />
     <Concept />
