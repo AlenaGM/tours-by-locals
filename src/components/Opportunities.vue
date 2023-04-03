@@ -34,34 +34,75 @@
 
 <style lang="scss" scoped>
 .opportunities {
-  padding: 0 1.5rem;
+  display: grid;
+  padding: 0 134px 0 1.5rem;
   background: url(../assets/images/bg_image_5.png) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
   @media screen and (min-width: 1345px) {
-    padding: 0 3.75rem;
+    padding: 0 164px 0 3.75rem;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 0 107px 0 1.5rem;
   }
   @media screen and (max-width: 767px) {
-    padding: 0 1rem;
+    padding: 0 46px 0 1rem;
     background: url(../assets/images/bg_image_5_mobile.png) bottom/100% auto
       no-repeat;
     border-radius: 0px 0px 24px 24px;
   }
   &__title {
     text-align: left;
-    margin-bottom: 2rem;
+  }
+  &__intro {
+    margin-bottom: 96px;
+    max-width: 720px;
+    @media screen and (min-width: 1345px) {
+      max-width: 800px;
+    }
     @media screen and (max-width: 1024px) {
-      font-size: 64px;
-      line-height: 72px;
-      margin-bottom: 1.5rem;
+      margin-bottom: 56px;
+      max-width: 600px;
     }
-    @media screen and (max-width: 768px) {
-      margin-bottom: 2rem;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px;
+      max-width: none;
     }
-    @media screen and (max-width: 500px) {
+  }
+  &__list {
+    list-style: "★" outside;
+    margin-bottom: 600px;
+    padding-left: 2rem;
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 448px;
+      padding-left: 1.5rem;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: calc(100vw * 0.63);
+      padding-left: 1rem;
+    }
+    li {
       font-size: 40px;
-      line-height: 48px;
-      text-align: left;
-      margin-bottom: 1rem;
+      line-height: 56px;
+      padding-left: 77px;
+      @media screen and (min-width: 1345px) {
+        padding-left: 71px;
+      }
+      @media screen and (max-width: 1024px) {
+        font-size: 32px;
+        line-height: 48px;
+        padding-left: 56px;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 17px;
+        line-height: 24px;
+        padding-left: 16px;
+      }
+    }
+    li:not(:last-of-type) {
+      margin-bottom: 4rem;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 }
