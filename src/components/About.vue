@@ -89,7 +89,7 @@
     margin-bottom: 120px;
     @media screen and (max-width: 1024px) {
       margin-bottom: 56px;
-      width: 520px;
+      max-width: 520px;
       justify-content: flex-start;
     }
     @media screen and (max-width: 767px) {
@@ -150,14 +150,14 @@
     }
     @media screen and (max-width: 1024px) {
       margin-bottom: 483px;
-      width: 520px;
-      padding-right: 40px;
+      max-width: 520px;
+      width: 100%;
       justify-self: center;
       justify-content: flex-start;
     }
     @media screen and (max-width: 767px) {
       margin-bottom: 450px;
-      width: 100%;
+      max-width: none;
       padding-right: 0px;
       justify-content: flex-start;
       justify-self: flex-start;

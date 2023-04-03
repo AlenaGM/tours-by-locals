@@ -38,17 +38,19 @@
 .header {
   display: grid;
   grid-template: minmax(80px, auto) 1fr/ 1fr;
-  background: url(../assets/images/bg_image_1.png), #231e1b;
-  background-size: cover;
+  background: url(../assets/images/bg_image_1.png) 100% 100% / cover no-repeat,
+    #231e1b;
   border-radius: 0px 0px 80px 80px;
   padding: 2rem 1.5rem 0;
   @media screen and (min-width: 1345px) {
     padding: 2rem 3.75rem 0;
+    min-height: 1000px;
   }
   @media screen and (max-width: 767px) {
     grid-template: minmax(56px, auto) 1fr/ 1fr;
-    background: url(../assets/images/bg_image_1_mobile.png), #231e1b;
-    background-size: cover;
+    background: url(../assets/images/bg_image_1_mobile.png) 100% 100% / cover
+        no-repeat,
+      #231e1b;
     border-radius: 0px 0px 24px 24px;
     padding: 1rem 1rem 0;
   }
@@ -110,7 +112,6 @@
   }
   &__content {
     margin-top: 2.5rem;
-    max-width: 600px;
     p {
       margin-top: 1rem;
       font-family: "MuseoSansCyrl-300", sans-serif;
@@ -119,19 +120,18 @@
       line-height: 24px;
       color: var(--color-white);
       text-align: left;
+      max-width: 600px;
       @media screen and (max-width: 1024px) {
         margin-top: 0.5rem;
+        max-width: 400px;
       }
       @media screen and (max-width: 767px) {
         color: var(--color-black);
+        max-width: 60%;
       }
-    }
-    @media screen and (max-width: 1024px) {
-      max-width: 400px;
     }
     @media screen and (max-width: 767px) {
       margin-top: 2rem;
-      max-width: 260px;
     }
   }
 }

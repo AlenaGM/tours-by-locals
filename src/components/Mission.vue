@@ -37,12 +37,7 @@
   grid-template-columns: 50% 1fr;
   justify-items: start;
   padding: 0 1.5rem;
-  background: linear-gradient(
-      180deg,
-      #ffffff 27.16%,
-      rgba(255, 255, 255, 0) 56.09%
-    ),
-    url(../assets/images/bg_image_3.png) bottom/100% auto no-repeat;
+  background: url(../assets/images/bg_image_3.png) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
   @media screen and (min-width: 1345px) {
     padding: 0 3.75rem;
@@ -55,12 +50,8 @@
       "advantage";
     grid-template-columns: 1fr;
     padding: 0 1rem;
-    background: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        rgba(255, 255, 255, 0) 56.09%
-      ),
-      url(../assets/images/bg_image_3_mobile.png) bottom/100% auto no-repeat;
+    background: url(../assets/images/bg_image_3_mobile.png) bottom/100% auto
+      no-repeat;
     border-radius: 0px 0px 24px 24px;
   }
   &__title {
@@ -83,9 +74,9 @@
   }
   &__content {
     grid-area: content;
-    margin-bottom: 580px;
+    margin-bottom: calc(100vw * 0.47);
     @media screen and (max-width: 1024px) {
-      margin-bottom: 480px;
+      margin-bottom: calc(100vw * 0.6);
     }
     @media screen and (max-width: 767px) {
       margin-bottom: 24px;
@@ -110,13 +101,7 @@
     }
     @media screen and (max-width: 767px) {
       width: 100%;
-      margin-bottom: 540px;
-    }
-    @media screen and (max-width: 700px) {
-      margin-bottom: 500px;
-    }
-    @media screen and (max-width: 600px) {
-      margin-bottom: 460px;
+      margin-bottom: calc(100vw * 0.8);
     }
   }
 }
