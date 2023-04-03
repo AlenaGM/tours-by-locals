@@ -112,6 +112,13 @@
   }
   &__content {
     margin-top: 2.5rem;
+    max-width: 600px;
+    @media screen and (max-width: 1024px) {
+      max-width: 400px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-top: 2rem;
+    }
     p {
       margin-top: 1rem;
       font-family: "MuseoSansCyrl-300", sans-serif;
@@ -120,18 +127,14 @@
       line-height: 24px;
       color: var(--color-white);
       text-align: left;
-      max-width: 600px;
+      max-width: 420px;
       @media screen and (max-width: 1024px) {
         margin-top: 0.5rem;
-        max-width: 400px;
       }
       @media screen and (max-width: 767px) {
         color: var(--color-black);
         max-width: 60%;
       }
-    }
-    @media screen and (max-width: 767px) {
-      margin-top: 2rem;
     }
   }
 }
