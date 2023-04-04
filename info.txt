@@ -1,8 +1,5 @@
 ШРИФТЫ
-"MuseoSansCyrl-300", sans-serif;
-"MuseoSansCyrl-500", sans-serif;
-"MuseoSansCyrl-700", sans-serif;
-"MuseoSansCyrl-900", sans-serif;
+"MuseoSansCyrl", sans-serif;
 
 РАЗМЕРЫ
 //Основной
@@ -30,3 +27,5 @@ padding: 0 1.5rem;
     //Мобильник
   }
 */
+
+target="_blank" rel="noopener noreferrer"

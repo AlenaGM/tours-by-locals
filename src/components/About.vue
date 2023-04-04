@@ -103,7 +103,7 @@
       align-items: flex-end;
       padding-right: 40px;
       padding-top: 52px;
-      font-family: "MuseoSansCyrl-700", sans-serif;
+      font-family: "MuseoSansCyrl", sans-serif;
       font-size: 96px;
       font-weight: 700;
       line-height: 96px;

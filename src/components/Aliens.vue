@@ -43,7 +43,7 @@
     }
   }
   &__label {
-    font-family: "MuseoSansCyrl-500", sans-serif;
+    font-family: "MuseoSansCyrl", sans-serif;
     font-size: 17px;
     font-weight: 400;
     line-height: 24px;

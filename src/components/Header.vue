@@ -95,7 +95,7 @@
         }
       }
       div:first-of-type {
-        font-family: "MuseoSansCyrl-300", sans-serif;
+        font-family: "MuseoSansCyrl", sans-serif;
         font-size: 17px;
         font-weight: 400;
         line-height: 24px;
@@ -121,7 +121,7 @@
     }
     p {
       margin-top: 1rem;
-      font-family: "MuseoSansCyrl-300", sans-serif;
+      font-family: "MuseoSansCyrl", sans-serif;
       font-size: 17px;
       font-weight: 400;
       line-height: 24px;
