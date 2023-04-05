@@ -61,7 +61,7 @@ import guides from "../assets/data/guides.js";
     padding: 0 3.75rem;
   }
   @media screen and (max-width: 1024px) {
-    grid-template-columns: 80% minmax(170px, 309px);
+    grid-template-columns: 1fr minmax(170px, 309px);
     align-items: end;
     column-gap: 0;
   }
@@ -70,7 +70,7 @@ import guides from "../assets/data/guides.js";
     display: grid;
     align-items: start;
     justify-items: start;
-    grid-template-columns: 80% minmax(120px, 170px);
+    grid-template-columns: 1fr minmax(120px, 170px);
     grid-template-areas:
       "title title"
       "intro image"

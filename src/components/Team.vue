@@ -1,11 +1,67 @@
 <script setup></script>
 
 <template>
-  <div class="team"><h2 class="team__title">Команда</h2></div>
+  <div class="team">
+    <div class="team__info">
+      <h2 class="team__title">Команда</h2>
+      <p>
+        У нас по-настоящему дружная команда. Мы регулярно проводим неофициальные
+        встречи в московском офисе и придумываем форматы онлайн-встреч для того,
+        чтобы не терять связь с ребятами на удалёнке из других городов и стран.
+      </p>
+    </div>
+    <div class="team__stat">
+      <div class="team__stat_item">
+        124
+        <span>человека</span>
+      </div>
+    </div>
+    <div class="team__image">
+      <picture>
+        <source media="(min-width:768px)" srcset="../assets/images/team.png" />
+        <source
+          media="(max-width:767px)"
+          srcset="../assets/images/team_mobile.png"
+        />
+        <img src="../assets/images/team.png" alt="team" />
+      </picture>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .team {
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-areas:
+    "info stat"
+    "image image";
+  grid-template-columns: 1fr 440px;
+  @media screen and (min-width: 1345px) {
+    grid-template-columns: 1fr 580px;
+    padding: 0 3.75rem;
+  }
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr 310px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "info"
+      "stat"
+      "image";
+  }
+  &__info {
+    grid-area: info;
+    margin-bottom: 80px;
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 64px;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 0;
+    }
+  }
   &__title {
     text-align: left;
     margin-bottom: 2rem;
@@ -20,6 +76,48 @@
       text-align: left;
       margin-bottom: 1rem;
     }
+  }
+  &__stat {
+    grid-area: stat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    &_item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 40px;
+      padding-top: 52px;
+      margin: 2rem 0;
+      font-family: "MuseoSansCyrl", sans-serif;
+      font-size: 96px;
+      font-weight: 700;
+      line-height: 96px;
+      text-align: left;
+      background: url("../assets/images/arrow.png") right no-repeat;
+      @media screen and (min-width: 1345px) {
+        font-size: 120px;
+        line-height: 120px;
+      }
+      @media screen and (max-width: 767px) {
+        margin: 0 0 2rem;
+      }
+      span {
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 32px;
+        align-self: center;
+        margin-top: -6px;
+        @media screen and (max-width: 1024px) {
+          font-size: 17px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  &__image {
+    grid-area: image;
   }
 }
 </style>
