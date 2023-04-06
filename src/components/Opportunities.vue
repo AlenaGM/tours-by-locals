@@ -55,17 +55,17 @@
   }
   &__intro {
     margin-bottom: 96px;
-    max-width: 720px;
+    width: 75%;
     @media screen and (min-width: 1345px) {
-      max-width: 800px;
+      width: 808px;
     }
     @media screen and (max-width: 1024px) {
       margin-bottom: 56px;
-      max-width: 600px;
+      width: 83%;
     }
     @media screen and (max-width: 767px) {
       margin-bottom: 40px;
-      max-width: none;
+      width: 100%;
     }
   }
   &__list {
@@ -101,7 +101,7 @@
     li:not(:last-of-type) {
       margin-bottom: 4rem;
       @media screen and (max-width: 767px) {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2.5rem;
       }
     }
   }
