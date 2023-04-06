@@ -1,4 +1,4 @@
-const guides = [
+const concepts = [
   {
     id: "conc01",
     info: "Постоянно растем, чтобы завтра было лучше, чем вчера",
@@ -31,4 +31,4 @@ const guides = [
   },
 ];
 
-export default guides;
+export default concepts;

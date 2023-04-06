@@ -36,13 +36,14 @@
   grid-template-areas:
     "info stat"
     "image image";
-  grid-template-columns: 1fr 440px;
+  grid-template-columns: 66% 1fr;
+  align-items: center;
   @media screen and (min-width: 1345px) {
-    grid-template-columns: 1fr 580px;
+    grid-template-columns: 704 1fr;
     padding: 0 3.75rem;
   }
   @media screen and (max-width: 1024px) {
-    grid-template-columns: 1fr 310px;
+    grid-template-columns: 57% 1fr;
   }
   @media screen and (max-width: 767px) {
     padding: 0 1rem;
@@ -64,18 +65,6 @@
   }
   &__title {
     text-align: left;
-    margin-bottom: 2rem;
-    @media screen and (max-width: 1024px) {
-      font-size: 64px;
-      line-height: 72px;
-      margin-bottom: 1.5rem;
-    }
-    @media screen and (max-width: 500px) {
-      font-size: 40px;
-      line-height: 48px;
-      text-align: left;
-      margin-bottom: 1rem;
-    }
   }
   &__stat {
     grid-area: stat;
@@ -89,7 +78,7 @@
       align-items: flex-end;
       padding-right: 40px;
       padding-top: 52px;
-      margin: 2rem 0;
+      margin-bottom: 40px;
       font-family: "MuseoSansCyrl", sans-serif;
       font-size: 96px;
       font-weight: 700;
@@ -102,6 +91,7 @@
       }
       @media screen and (max-width: 767px) {
         margin: 0 0 2rem;
+        padding-top: 48px;
       }
       span {
         font-size: 24px;

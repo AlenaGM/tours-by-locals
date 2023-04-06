@@ -60,7 +60,7 @@ import gallery from "../assets/data/gallery.js";
   &__intro {
     display: grid;
     justify-items: center;
-    margin-bottom: 336px;
+    margin-bottom: 335px;
     @media screen and (max-width: 767px) {
       margin-bottom: 48px;
     }
@@ -71,7 +71,7 @@ import gallery from "../assets/data/gallery.js";
       }
     }
     &_text {
-      width: 80%;
+      width: 83%;
       max-width: none;
       text-align: center;
       margin-bottom: 2rem;
@@ -100,18 +100,17 @@ import gallery from "../assets/data/gallery.js";
           height: 56px;
         }
       }
-      p {
-        @media screen and (max-width: 1024px) {
-          font-size: 24px;
-          line-height: 32px;
-        }
-      }
+      p,
       span {
-        color: var(--color-gray70);
+        font-size: 24px;
+        line-height: 32px;
         @media screen and (max-width: 767px) {
           font-size: 17px;
           line-height: 24px;
         }
+      }
+      span {
+        color: var(--color-gray70);
       }
     }
   }
@@ -127,7 +126,7 @@ import gallery from "../assets/data/gallery.js";
     }
     &_item:nth-of-type(odd) {
       position: relative;
-      top: -216px;
+      top: -215px;
       @media screen and (max-width: 767px) {
         top: 0;
       }
@@ -160,18 +159,12 @@ import gallery from "../assets/data/gallery.js";
       height: 48px;
       margin-right: 1rem;
       @media screen and (max-width: 1024px) {
-        width: 48px;
-        height: 48px;
+        width: 40px;
+        height: 40px;
       }
     }
     p {
-      font-size: 24px;
       font-weight: 600;
-      line-height: 32px;
-      @media screen and (max-width: 1024px) {
-        font-size: 17px;
-        line-height: 24px;
-      }
     }
   }
   &__info {

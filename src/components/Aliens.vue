@@ -27,7 +27,7 @@
     border-radius: 0px 0px 24px 24px;
   }
   &__content {
-    margin-bottom: calc(100vw * 0.63);
+    margin-bottom: calc(100vw * 0.56);
     max-width: 800px;
     text-align: center;
     @media screen and (min-width: 1345px) {
@@ -35,7 +35,7 @@
     }
     @media screen and (max-width: 1024px) {
       width: 100%;
-      padding: 0 70px;
+      padding: 0 72px;
     }
     @media screen and (max-width: 767px) {
       margin-bottom: calc(100vw * 0.82);

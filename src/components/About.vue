@@ -4,10 +4,10 @@
   <div class="about">
     <div class="about__intro">
       <h2 class="about__intro_title">Компания</h2>
-      <p class="about__intro_text content-text">
+      <div class="about__intro_text content-text">
         С момента запуска компании в 2013 году мы стали одними из лидеров на
         рынке бронирования экскурсий
-      </p>
+      </div>
     </div>
     <div class="about__stat">
       <div class="about__stat_item">
@@ -71,6 +71,9 @@
     &_text {
       width: 800px;
       margin-bottom: 72px;
+      @media screen and (min-width: 1345px) {
+        width: 808px;
+      }
       @media screen and (max-width: 1024px) {
         width: 660px;
         margin-bottom: 64px;
@@ -89,7 +92,7 @@
     margin-bottom: 120px;
     @media screen and (max-width: 1024px) {
       margin-bottom: 56px;
-      max-width: 520px;
+      max-width: 500px;
       justify-content: flex-start;
     }
     @media screen and (max-width: 767px) {
@@ -132,9 +135,12 @@
         }
       }
       &:not(:last-of-type) {
-        margin-right: 80px;
+        margin-right: 40px;
+        @media screen and (min-width: 1345px) {
+          margin-right: 56px;
+        }
         @media screen and (max-width: 767px) {
-          margin-right: 40px;
+          margin-right: 16px;
         }
       }
     }
@@ -142,14 +148,17 @@
   &__content {
     display: grid;
     justify-self: end;
-    width: 48%;
+    width: 51%;
+    padding-right: 32px;
     margin-bottom: calc(100vw * 0.5);
     @media screen and (min-width: 1345px) {
-      width: 32%;
+      width: 444px;
+      margin-bottom: 640px;
+      padding-right: 0px;
     }
     @media screen and (max-width: 1024px) {
       margin-bottom: calc(100vw * 0.62);
-      max-width: 520px;
+      max-width: 500px;
       width: 100%;
       justify-self: center;
       justify-content: flex-start;
