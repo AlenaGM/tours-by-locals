@@ -26,10 +26,10 @@
         Работа <br />
         в Tripster
       </h1>
-      <p class="content-text">
+      <div class="content-text">
         Сервис онлайн-бронирования необычных экскурсий от местных жителей по
         всему миру
-      </p>
+      </div>
     </div>
   </header>
 </template>
@@ -76,22 +76,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 16px 12px;
         color: var(--color-black);
         background-color: #00000012;
         backdrop-filter: blur(15px);
         border-radius: 100px;
-        @media screen and (max-width: 767px) {
-          padding: 13.33px 10px;
-        }
         cursor: pointer;
-        img {
-          width: 24px;
-          height: 16px;
-          @media screen and (max-width: 767px) {
-            width: 20px;
-            height: 13.33px;
-          }
+        height: 48px;
+        @media screen and (max-width: 767px) {
+          height: 40px;
         }
       }
       div:first-of-type {
@@ -101,25 +93,33 @@
         line-height: 24px;
         text-align: center;
         margin-right: 0.5rem;
-        padding: 12px 32px;
+        padding: 0 32px;
         @media screen and (max-width: 767px) {
           font-size: 14px;
           line-height: 20px;
-          padding: 10px 16px;
+          padding: 0 16px;
+        }
+      }
+      div:last-of-type {
+        width: 48px;
+        @media screen and (max-width: 767px) {
+          width: 40px;
+        }
+        img {
+          width: 24px;
+          @media screen and (max-width: 767px) {
+            width: 20px;
+          }
         }
       }
     }
   }
   &__content {
     margin-top: 2.5rem;
-    max-width: 600px;
-    @media screen and (max-width: 1024px) {
-      max-width: 400px;
-    }
     @media screen and (max-width: 767px) {
       margin-top: 2rem;
     }
-    p {
+    div {
       margin-top: 1rem;
       font-family: "MuseoSansCyrl", sans-serif;
       font-size: 17px;
@@ -127,13 +127,22 @@
       line-height: 24px;
       color: var(--color-white);
       text-align: left;
-      max-width: 420px;
+      width: 40%;
+      @media screen and (min-width: 1345px) {
+        width: 496px;
+      }
       @media screen and (max-width: 1024px) {
         margin-top: 0.5rem;
       }
       @media screen and (max-width: 767px) {
         color: var(--color-black);
-        max-width: 60%;
+        width: 60%;
+      }
+    }
+    @media screen and (orientation: landscape) and (max-width: 767px) {
+      h1,
+      div {
+        color: var(--color-white);
       }
     }
   }

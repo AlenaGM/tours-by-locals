@@ -2,7 +2,7 @@
 
 <template>
   <footer class="footer">
-    <a href="#" target="_blank" rel="noopener noreferrer">Присоединяйся ></a>
+    <a href="#" target="_blank" rel="noopener noreferrer">Присоединяйся </a>
     <div>© 2013–2023, Tripster Limited</div>
   </footer>
 </template>
@@ -25,13 +25,23 @@
     font-weight: 700;
     line-height: 88px;
     margin-bottom: 184px;
+    display: inline-flex;
+    align-items: flex-end;
+    padding-right: 50px;
+    background: url(../assets/images/footer_arrow.svg) right 60% /26px 42px no-repeat;
+    margin-right: 20px;
+
     &:hover {
       color: #d42764;
+      background: url(../assets/images/footer_arrow_hover.svg) right 60% /26px 42px
+        no-repeat;
     }
     @media screen and (max-width: 767px) {
       font-size: 32px;
       line-height: 40px;
       margin-bottom: 80px;
+      background-size: 12px 20px;
+      padding-right: 20px;
     }
   }
   div {
