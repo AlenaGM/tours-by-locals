@@ -9,11 +9,9 @@ import concepts from "../assets/data/concepts.js";
       члена команды менять процессы в компании
     </h3>
     <div class="concept__intro">
-      <p>
-        У нас нет босса и подчинённых, а люди в команде — не просто ресурс. В
-        Трипстере каждый заряжен общей идеей — делать качественный и полезный
-        продукт для путешествий. И в этом ценность общего дела для нас.
-      </p>
+      У нас нет босса и подчинённых, а люди в команде — не просто ресурс. В
+      Трипстере каждый заряжен общей идеей — делать качественный и полезный
+      продукт для путешествий. И в этом ценность общего дела для нас.
     </div>
     <div class="concept__gallery">
       <div
@@ -55,63 +53,57 @@ import concepts from "../assets/data/concepts.js";
   }
   &__gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(476px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 1.5rem;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(auto-fit, minmax(348px, 1fr));
+      grid-auto-rows: 1fr;
+    }
     @media screen and (max-width: 767px) {
-      gap: 1rem;
       grid-template-columns: 1fr;
+      gap: 1rem;
     }
     &_item {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      padding: 40px;
+      display: grid;
+      grid-auto-flow: row;
+      grid-template: 1fr auto / 1fr;
+      justify-items: center;
       background: var(--color-gradient);
       border-radius: 48px;
-      align-items: center;
-      justify-content: space-between;
-      aspect-ratio: 1 / 1;
+      padding: 40px;
       @media screen and (max-width: 1024px) {
         border-radius: 32px;
       }
-      @media screen and (max-width: 767px) {
-        aspect-ratio: 5 / 5;
-      }
       p {
-        align-self: flex-start;
-        max-width: 400px;
         text-align: left;
-        @media screen and (max-width: 1024px) {
-          max-width: 340px;
+        padding-right: 15%;
+        @media screen and (max-width: 767px) {
+          padding-bottom: 1.5rem;
         }
       }
       div {
-        text-align: center;
-        img {
-          width: 95%;
-          @media screen and (max-width: 1200px) {
-            width: 78%;
-          }
-          @media screen and (max-width: 1024px) {
-            width: 60%;
-          }
-          @media screen and (max-width: 767px) {
-            width: 100%;
-            margin-top: 1rem;
-          }
+        position: relative;
+        aspect-ratio: 1/1;
+        width: 75%;
+        margin: auto;
+        img,
+        picture {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
         }
       }
     }
     &_item:last-of-type {
-      aspect-ratio: 1/1;
-      display: flex;
-      flex-direction: column;
       @media screen and (min-width: 768px) {
         grid-column: span 2;
         aspect-ratio: 2/1;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+        justify-items: center;
       }
     }
   }

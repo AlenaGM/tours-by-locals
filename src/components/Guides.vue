@@ -8,11 +8,9 @@ import guides from "../assets/data/guides.js";
       Трипстер даёт людям возможность получать необычный опыт даже в рамках
       родного города
     </h3>
-    <div>
-      <p class="guides__intro">
-        Наш основной фокус — на гидах-личностях, которые буквально меняют
-        отношение к привычному или открывают людям совсем неизвестное.
-      </p>
+    <div class="guides__intro">
+      Наш основной фокус — на гидах-личностях, которые буквально меняют
+      отношение к привычному или открывают людям совсем неизвестное.
     </div>
     <div class="guides__image">
       <img src="../assets/images/guides.png" alt="guides" />
@@ -52,25 +50,19 @@ import guides from "../assets/data/guides.js";
     "title image"
     "intro image"
     "gallery gallery";
-  grid-template-columns: 70% minmax(309px, 1fr);
+  grid-template-columns: 74% 1fr;
   column-gap: 1.5rem;
   align-items: center;
   justify-items: center;
   @media screen and (min-width: 1345px) {
-    grid-template-columns: 1fr 392px;
+    grid-template-columns: 808px 1fr;
     padding: 0 3.75rem;
   }
-  @media screen and (max-width: 1024px) {
-    grid-template-columns: 1fr minmax(170px, 309px);
-    align-items: end;
-    column-gap: 0;
-  }
   @media screen and (max-width: 767px) {
+    column-gap: 0;
     padding: 0 1rem;
     display: grid;
-    align-items: start;
-    justify-items: start;
-    grid-template-columns: 1fr minmax(120px, 170px);
+    grid-template-columns: 60% 1fr;
     grid-template-areas:
       "title title"
       "intro image"
@@ -81,6 +73,9 @@ import guides from "../assets/data/guides.js";
   }
   &__intro {
     grid-area: intro;
+    @media screen and (max-width: 767px) {
+      align-self: flex-start;
+    }
   }
   &__image {
     grid-area: image;
@@ -109,6 +104,7 @@ import guides from "../assets/data/guides.js";
     @media screen and (max-width: 767px) {
       margin: 56px auto 0;
       grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
     }
     &_item {
       display: flex;
@@ -129,7 +125,7 @@ import guides from "../assets/data/guides.js";
         display: none;
       }
       @media screen and (max-width: 767px) {
-        display: block;
+        display: flex;
       }
     }
     &_item:nth-of-type(even) {

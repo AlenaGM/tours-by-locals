@@ -18,12 +18,10 @@
       </p>
     </div>
     <div class="mission__advantage">
-      <p>
-        Трипстер — это прибыльный бизнес, который полностью окупает себя, а
-        значит, не зависит от сторонних инвесторов. Заработанные деньги
-        инвестируются в дальнейший рост, так что даже в условиях нестабильной
-        экономики мы развиваемся.
-      </p>
+      Трипстер — это прибыльный бизнес, который полностью окупает себя, а
+      значит, не зависит от сторонних инвесторов. Заработанные деньги
+      инвестируются в дальнейший рост, так что даже в условиях нестабильной
+      экономики мы развиваемся.
     </div>
   </div>
 </template>
@@ -57,7 +55,7 @@
   &__title {
     grid-area: title;
     margin-bottom: 4rem;
-    width: 740px;
+    width: 730px;
     @media screen and (min-width: 1345px) {
       width: 864px;
       margin-bottom: 4rem;
@@ -68,15 +66,18 @@
     }
     @media screen and (max-width: 767px) {
       width: 100%;
-      max-width: 500px;
+      max-width: 480px;
       margin-bottom: 1rem;
     }
   }
   &__content {
     grid-area: content;
     margin-bottom: calc(100vw * 0.47);
+    @media screen and (min-width: 1345px) {
+      margin-bottom: 552px;
+    }
     @media screen and (max-width: 1024px) {
-      margin-bottom: calc(100vw * 0.6);
+      margin-bottom: calc(100vw * 0.5);
     }
     @media screen and (max-width: 767px) {
       margin-bottom: 24px;
@@ -86,12 +87,10 @@
     grid-area: advantage;
     width: 61%;
     margin-left: auto;
-    p {
-      font-size: 17px;
-      font-weight: 400;
-      line-height: 24px;
-      opacity: 0.5;
-    }
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    opacity: 0.5;
     @media screen and (min-width: 1345px) {
       width: 288px;
       margin: 0 auto;
