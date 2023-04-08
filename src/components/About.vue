@@ -19,7 +19,11 @@
         <span>стран</span>
       </div>
       <div class="about__stat_item">
-        2 052 370
+        {{
+          new Intl.NumberFormat("ru-RU", {
+            style: "decimal",
+          }).format(2052370)
+        }}
         <span>посетителей в месяц</span>
       </div>
     </div>
