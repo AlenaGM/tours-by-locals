@@ -34,6 +34,7 @@
         путешественников лучшее.
       </p>
     </div>
+    <div><a class="about__arrow-up" href="#" /></div>
   </div>
 </template>
 
@@ -171,6 +172,35 @@
       justify-self: flex-start;
       padding-right: 0px;
       margin-bottom: calc(100vw * 0.83);
+    }
+  }
+  &__arrow-up {
+    z-index: 2;
+    color: var(--color-black);
+    background-color: #00000012;
+    backdrop-filter: blur(15px);
+    border-radius: 100px;
+    cursor: pointer;
+    background: url(../assets/images/up_arrow.svg) center / 50% 50% no-repeat,
+      #00000012;
+    height: 48px;
+    width: 48px;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    @media screen and (min-width: 1345px) {
+      right: calc((100vw - 1344px) / 2 + 60px);
+    }
+    @media screen and (max-width: 767px) {
+      height: 40px;
+      width: 40px;
+      right: 1rem;
+      bottom: 1rem;
+    }
+    &:hover {
+      background: url(../assets/images/up_arrow_hover.svg) center / 50% 50%
+          no-repeat,
+        #00000012;
     }
   }
 }

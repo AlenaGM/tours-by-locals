@@ -23,7 +23,7 @@ const menu = [
 </script>
 
 <template>
-  <header class="header">
+  <header class="header" id="#header">
     <nav class="header__navbar">
       <div class="header__navbar_logo">
         <a href="#">
@@ -35,18 +35,16 @@ const menu = [
         <div>
           <a href="#">Вакансии</a>
         </div>
-        <div @click="isOpenedMobileMenu = !isOpenedMobileMenu">
-          <img
-            v-if="!isOpenedMobileMenu"
-            alt="Dropdown menu icon"
-            src="../assets/images/open.svg"
-          />
-          <img
-            v-else
-            alt="Dropdown menu icon"
-            src="../assets/images/close.svg"
-          />
-        </div>
+        <div
+          class="menu_open"
+          v-if="!isOpenedMobileMenu"
+          @click="isOpenedMobileMenu = !isOpenedMobileMenu"
+        />
+        <div
+          class="menu_close"
+          v-else
+          @click="isOpenedMobileMenu = !isOpenedMobileMenu"
+        />
       </div>
     </nav>
 
@@ -148,11 +146,23 @@ const menu = [
         @media screen and (max-width: 767px) {
           width: 40px;
         }
-        img {
-          width: 24px;
-          @media screen and (max-width: 767px) {
-            width: 20px;
-          }
+      }
+      .menu_open {
+        background: url(../assets/images/open.svg) center / 50% 50% no-repeat,
+          #00000012;
+        &:hover {
+          background: url(../assets/images/open_hover.svg) center / 50% 50%
+              no-repeat,
+            #00000012;
+        }
+      }
+      .menu_close {
+        background: url(../assets/images/close.svg) center / 50% 50% no-repeat,
+          #00000012;
+        &:hover {
+          background: url(../assets/images/close_hover.svg) center / 50% 50%
+              no-repeat,
+            #00000012;
         }
       }
     }

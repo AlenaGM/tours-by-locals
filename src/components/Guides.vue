@@ -110,6 +110,7 @@ import guides from "../assets/data/guides.js";
       position: relative;
       display: flex;
       justify-content: center;
+      transition: all 0.5s ease-out;
       img {
         border-radius: 40px;
         @media screen and (max-width: 1024px) {

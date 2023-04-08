@@ -145,6 +145,7 @@ a {
   &:hover {
     text-decoration: none;
     color: var(--color-hover);
+    transform: scale(1.05);
   }
   @media screen and (max-width: 1024px) {
     font-size: 17px;
