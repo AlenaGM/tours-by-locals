@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="about">
+  <div class="about" id="about">
     <div class="about__intro">
       <h2 class="about__intro_title">Компания</h2>
       <div class="about__intro_text content-text">
@@ -37,7 +37,6 @@
 .about {
   display: grid;
   justify-items: center;
-  padding: 0 1.5rem;
   background: linear-gradient(
       180deg,
       #ffffff 27.16%,
@@ -45,11 +44,11 @@
     ),
     url(../assets/images/bg_image_2.png) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
+  padding: 0 1.5rem;
   @media screen and (min-width: 1345px) {
     padding: 0 3.75rem;
   }
   @media screen and (max-width: 767px) {
-    padding: 0 1rem;
     background: linear-gradient(
         180deg,
         #ffffff 0%,
@@ -57,6 +56,7 @@
       ),
       url(../assets/images/bg_image_2_mobile.png) bottom/100% auto no-repeat;
     border-radius: 0px 0px 24px 24px;
+    padding: 0 1rem;
   }
   &__intro {
     &_title {
@@ -91,27 +91,26 @@
     justify-content: center;
     margin-bottom: 120px;
     @media screen and (max-width: 1024px) {
-      margin-bottom: 56px;
       max-width: 500px;
       justify-content: flex-start;
+      margin-bottom: 56px;
     }
     @media screen and (max-width: 767px) {
-      margin-bottom: 40px;
       justify-content: flex-start;
       justify-self: flex-start;
+      margin-bottom: 40px;
     }
     &_item {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding-right: 40px;
-      padding-top: 52px;
       font-family: "MuseoSansCyrl", sans-serif;
       font-size: 96px;
       font-weight: 700;
       line-height: 96px;
       text-align: left;
       background: url("../assets/images/arrow.png") right no-repeat;
+      padding: 52px 40px 0 0;
       @media screen and (min-width: 1345px) {
         font-size: 120px;
         line-height: 120px;
@@ -119,9 +118,8 @@
       @media screen and (max-width: 767px) {
         font-size: 56px;
         line-height: 56px;
-        padding-right: 24px;
-        padding-top: 24px;
         background: url("../assets/images/arrow.png") right/48px no-repeat;
+        padding: 24px 24px 0 0;
       }
       span {
         font-size: 24px;
@@ -140,35 +138,35 @@
           margin-right: 56px;
         }
         @media screen and (max-width: 767px) {
-          margin-right: 16px;
+          margin-right: 1rem;
         }
       }
     }
   }
   &__content {
     display: grid;
-    justify-self: end;
     width: 51%;
-    padding-right: 32px;
+    justify-self: end;
+    padding-right: 2rem;
     margin-bottom: calc(100vw * 0.5);
     @media screen and (min-width: 1345px) {
       width: 444px;
-      margin-bottom: 640px;
       padding-right: 0px;
+      margin-bottom: 640px;
     }
     @media screen and (max-width: 1024px) {
-      margin-bottom: calc(100vw * 0.62);
-      max-width: 500px;
       width: 100%;
+      max-width: 500px;
       justify-self: center;
       justify-content: flex-start;
+      margin-bottom: calc(100vw * 0.62);
     }
     @media screen and (max-width: 767px) {
-      margin-bottom: calc(100vw * 0.83);
       max-width: none;
-      padding-right: 0px;
       justify-content: flex-start;
       justify-self: flex-start;
+      padding-right: 0px;
+      margin-bottom: calc(100vw * 0.83);
     }
   }
 }

@@ -34,9 +34,9 @@
     "content advantage";
   grid-template-columns: 50% 1fr;
   justify-items: start;
-  padding: 0 1.5rem;
   background: url(../assets/images/bg_image_3.png) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
+  padding: 0 1.5rem;
   @media screen and (min-width: 1345px) {
     padding: 0 3.75rem;
   }
@@ -47,15 +47,15 @@
       "content"
       "advantage";
     grid-template-columns: 1fr;
-    padding: 0 1rem;
     background: url(../assets/images/bg_image_3_mobile.png) bottom/100% auto
       no-repeat;
     border-radius: 0px 0px 24px 24px;
+    padding: 0 1rem;
   }
   &__title {
     grid-area: title;
-    margin-bottom: 4rem;
     width: 730px;
+    margin-bottom: 4rem;
     @media screen and (min-width: 1345px) {
       width: 864px;
       margin-bottom: 4rem;
@@ -80,7 +80,7 @@
       margin-bottom: calc(100vw * 0.5);
     }
     @media screen and (max-width: 767px) {
-      margin-bottom: 24px;
+      margin-bottom: 1.5rem;
     }
   }
   &__advantage {

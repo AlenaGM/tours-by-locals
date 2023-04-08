@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="opportunities">
+  <div class="opportunities" id="opportunities">
     <h2 class="opportunities__title">Возможности</h2>
     <div class="opportunities__intro">
       <p>
@@ -35,9 +35,9 @@
 <style lang="scss" scoped>
 .opportunities {
   display: grid;
-  padding: 0 134px 0 1.5rem;
   background: url(../assets/images/bg_image_5.png) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
+  padding: 0 134px 0 1.5rem;
   @media screen and (min-width: 1345px) {
     padding: 0 164px 0 3.75rem;
   }
@@ -45,40 +45,40 @@
     padding: 0 107px 0 1.5rem;
   }
   @media screen and (max-width: 767px) {
-    padding: 0 46px 0 1rem;
     background: url(../assets/images/bg_image_5_mobile.png) bottom/100% auto
       no-repeat;
     border-radius: 0px 0px 24px 24px;
+    padding: 0 46px 0 1rem;
   }
   &__title {
     text-align: left;
   }
   &__intro {
-    margin-bottom: 96px;
     width: 75%;
+    margin-bottom: 96px;
     @media screen and (min-width: 1345px) {
       width: 808px;
     }
     @media screen and (max-width: 1024px) {
-      margin-bottom: 56px;
       width: 83%;
+      margin-bottom: 56px;
     }
     @media screen and (max-width: 767px) {
-      margin-bottom: 40px;
       width: 100%;
+      margin-bottom: 40px;
     }
   }
   &__list {
     list-style: "★" outside;
-    margin-bottom: 600px;
     padding-left: 2rem;
+    margin-bottom: 600px;
     @media screen and (max-width: 1024px) {
-      margin-bottom: 448px;
       padding-left: 1.5rem;
+      margin-bottom: 448px;
     }
     @media screen and (max-width: 767px) {
-      margin-bottom: calc(100vw * 0.63);
       padding-left: 1rem;
+      margin-bottom: calc(100vw * 0.63);
     }
     li {
       font-size: 40px;
@@ -95,7 +95,7 @@
       @media screen and (max-width: 767px) {
         font-size: 17px;
         line-height: 24px;
-        padding-left: 16px;
+        padding-left: 1rem;
       }
     }
     li:not(:last-of-type) {

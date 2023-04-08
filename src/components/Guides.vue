@@ -17,11 +17,11 @@ import guides from "../assets/data/guides.js";
     </div>
     <div class="guides__gallery">
       <a
+        v-for="guide in guides"
         class="guides__gallery_item"
         :href="guide.path"
         target="_blank"
         rel="noopener noreferrer"
-        v-for="guide in guides"
         :key="guide.id"
         :name="guide.name"
         :rating="guide.rating"
@@ -44,7 +44,6 @@ import guides from "../assets/data/guides.js";
 
 <style lang="scss" scoped>
 .guides {
-  padding: 0 1.5rem;
   display: grid;
   grid-template-areas:
     "title image"
@@ -54,19 +53,20 @@ import guides from "../assets/data/guides.js";
   column-gap: 1.5rem;
   align-items: center;
   justify-items: center;
+  padding: 0 1.5rem;
   @media screen and (min-width: 1345px) {
     grid-template-columns: 808px 1fr;
     padding: 0 3.75rem;
   }
   @media screen and (max-width: 767px) {
-    column-gap: 0;
-    padding: 0 1rem;
     display: grid;
     grid-template-columns: 60% 1fr;
     grid-template-areas:
       "title title"
       "intro image"
       "gallery gallery";
+    column-gap: 0;
+    padding: 0 1rem;
   }
   &__title {
     grid-area: title;
@@ -94,21 +94,21 @@ import guides from "../assets/data/guides.js";
   }
   &__gallery {
     grid-area: gallery;
-    margin: 96px auto 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
+    margin: 96px auto 0;
     @media screen and (max-width: 1024px) {
       grid-template-columns: repeat(3, 1fr);
     }
     @media screen and (max-width: 767px) {
-      margin: 56px auto 0;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
+      margin: 56px auto 0;
     }
     &_item {
-      display: flex;
       position: relative;
+      display: flex;
       justify-content: center;
       img {
         border-radius: 40px;
@@ -140,14 +140,14 @@ import guides from "../assets/data/guides.js";
       align-items: center;
       text-align: center;
       bottom: 1rem;
+      @media screen and (max-width: 767px) {
+        bottom: 0.5rem;
+      }
       p {
         font-size: 17px;
         font-weight: 400;
         line-height: 17px;
         color: var(--color-white);
-      }
-      @media screen and (max-width: 767px) {
-        bottom: 0.5rem;
       }
       div:first-of-type {
         display: inline-flex;

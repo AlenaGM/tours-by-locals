@@ -66,8 +66,8 @@ import concepts from "../assets/data/concepts.js";
     }
     &_item {
       display: grid;
-      grid-auto-flow: row;
       grid-template: 1fr auto / 1fr;
+      grid-auto-flow: row;
       justify-items: center;
       background: var(--color-gradient);
       border-radius: 48px;
@@ -84,9 +84,9 @@ import concepts from "../assets/data/concepts.js";
       }
       div {
         position: relative;
-        aspect-ratio: 1/1;
         width: 75%;
         margin: auto;
+        aspect-ratio: 1/1;
         img,
         picture {
           position: absolute;
@@ -100,10 +100,10 @@ import concepts from "../assets/data/concepts.js";
     &_item:last-of-type {
       @media screen and (min-width: 768px) {
         grid-column: span 2;
-        aspect-ratio: 2/1;
         display: grid;
         grid-template: 1fr / 1fr 1fr;
         justify-items: center;
+        aspect-ratio: 2/1;
       }
     }
   }

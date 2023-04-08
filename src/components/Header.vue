@@ -1,26 +1,66 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+const isOpenedMobileMenu = ref(false);
+
+const menu = [
+  {
+    name: "Компания",
+    path: "#about",
+  },
+  {
+    name: "Продукт",
+    path: "#product",
+  },
+  {
+    name: "Возможности",
+    path: "#opportunities",
+  },
+  {
+    name: "Команда",
+    path: "#team",
+  },
+];
+</script>
 
 <template>
   <header class="header">
     <nav class="header__navbar">
       <div class="header__navbar_logo">
         <a href="#">
-          <img
-            alt="Tipster logo"
-            class="header__navbar_logo"
-            src="../assets/images/logo.svg"
-          />
+          <img alt="Tipster logo" src="../assets/images/logo.svg" />
         </a>
       </div>
+
       <div class="header__navbar_menu">
         <div>
           <a href="#">Вакансии</a>
         </div>
-        <div>
-          <img alt="Dropdown menu icon" src="../assets/images/open.svg" />
+        <div @click="isOpenedMobileMenu = !isOpenedMobileMenu">
+          <img
+            v-if="!isOpenedMobileMenu"
+            alt="Dropdown menu icon"
+            src="../assets/images/open.svg"
+          />
+          <img
+            v-else
+            alt="Dropdown menu icon"
+            src="../assets/images/close.svg"
+          />
         </div>
       </div>
     </nav>
+
+    <div class="header__dropdown" v-if="isOpenedMobileMenu">
+      <a
+        v-for="(element, i) of menu"
+        class="header__dropdown_link"
+        :href="element.path"
+        :key="i"
+      >
+        {{ element.name }}
+      </a>
+    </div>
+
     <div class="header__content">
       <h1>
         Работа <br />
@@ -37,7 +77,7 @@
 <style lang="scss" scoped>
 .header {
   display: grid;
-  grid-template: minmax(80px, auto) 1fr/ 1fr;
+  grid-template: minmax(48px, auto) 1fr/ 1fr;
   background: url(../assets/images/bg_image_1.png) 100% 100% / cover no-repeat,
     #231e1b;
   border-radius: 0px 0px 80px 80px;
@@ -47,22 +87,23 @@
     min-height: 1000px;
   }
   @media screen and (max-width: 767px) {
-    grid-template: minmax(56px, auto) 1fr/ 1fr;
+    grid-template: minmax(40px, auto) 1fr/ 1fr;
     background: url(../assets/images/bg_image_1_mobile.png) 100% 100% / cover
         no-repeat,
       #231e1b;
     border-radius: 0px 0px 24px 24px;
     padding: 1rem 1rem 0;
   }
-
   &__navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     &_logo {
-      display: block;
+      display: flex;
+      align-items: center;
       cursor: pointer;
       img {
+        display: block;
         height: 32px;
         @media screen and (max-width: 767px) {
           height: 20px;
@@ -87,17 +128,19 @@
         }
       }
       div:first-of-type {
-        font-family: "MuseoSansCyrl", sans-serif;
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 24px;
-        text-align: center;
         margin-right: 0.5rem;
-        padding: 0 32px;
-        @media screen and (max-width: 767px) {
-          font-size: 14px;
-          line-height: 20px;
-          padding: 0 16px;
+        a {
+          font-family: "MuseoSansCyrl", sans-serif;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: center;
+          padding: 0 2rem;
+          @media screen and (max-width: 767px) {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0 1rem;
+          }
         }
       }
       div:last-of-type {
@@ -114,13 +157,59 @@
       }
     }
   }
+  &__dropdown {
+    position: absolute;
+    top: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--color-black);
+    background-color: #00000012;
+    backdrop-filter: blur(15px);
+    width: 198px;
+    border-radius: 32px;
+    padding: 28px 32px 32px 32px;
+    z-index: 2;
+    right: 1.5rem;
+    @media screen and (min-width: 1345px) {
+      right: 3.75rem;
+    }
+    @media screen and (max-width: 767px) {
+      top: 64px;
+      right: 1rem;
+      width: 142px;
+      border-radius: 24px;
+      padding: 1rem;
+    }
+    &_link {
+      display: block;
+      color: var(--color-black);
+      text-decoration: none;
+      font-family: "MuseoSansCyrl", sans-serif;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 24px;
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+      &:hover {
+        color: var(--color-hover);
+      }
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+        @media screen and (max-width: 767px) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
   &__content {
     margin-top: 2.5rem;
     @media screen and (max-width: 767px) {
       margin-top: 2rem;
     }
     div {
-      margin-top: 1rem;
       font-family: "MuseoSansCyrl", sans-serif;
       font-size: 17px;
       font-weight: 400;
@@ -128,6 +217,7 @@
       color: var(--color-white);
       text-align: left;
       width: 40%;
+      margin-top: 1rem;
       @media screen and (min-width: 1345px) {
         width: 496px;
       }

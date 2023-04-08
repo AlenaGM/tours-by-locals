@@ -14,22 +14,22 @@
 .aliens {
   display: grid;
   justify-items: center;
-  padding: 0 1.5rem 1rem;
   background: url(../assets/images/bg_image_4.png) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
+  padding: 0 1.5rem 1rem;
   @media screen and (min-width: 1345px) {
     padding: 0 3.75rem 1rem;
   }
   @media screen and (max-width: 767px) {
-    padding: 0 1rem 0.5rem;
     background: url(../assets/images/bg_image_4_mobile.png) bottom/100% auto
       no-repeat;
     border-radius: 0px 0px 24px 24px;
+    padding: 0 1rem 0.5rem;
   }
   &__content {
-    margin-bottom: calc(100vw * 0.56);
     max-width: 800px;
     text-align: center;
+    margin-bottom: calc(100vw * 0.56);
     @media screen and (min-width: 1345px) {
       margin-bottom: 800px;
     }
@@ -38,18 +38,18 @@
       padding: 0 72px;
     }
     @media screen and (max-width: 767px) {
-      margin-bottom: calc(100vw * 0.82);
       padding: 0 1rem;
+      margin-bottom: calc(100vw * 0.82);
     }
   }
   &__label {
     font-family: "MuseoSansCyrl", sans-serif;
+    color: var(--color-black);
     font-size: 17px;
     font-weight: 400;
     line-height: 24px;
     text-align: center;
     padding: 4px 12px;
-    color: var(--color-black);
     background: rgba(255, 255, 255, 0.7);
     border-radius: 100px;
   }

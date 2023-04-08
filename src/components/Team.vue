@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="team">
+  <div class="team" id="team">
     <div class="team__info">
       <h2 class="team__title">Команда</h2>
       <p>
@@ -31,13 +31,13 @@
 
 <style lang="scss" scoped>
 .team {
-  padding: 0 1.5rem;
   display: grid;
   grid-template-areas:
     "info stat"
     "image image";
   grid-template-columns: 66% 1fr;
   align-items: center;
+  padding: 0 1.5rem;
   @media screen and (min-width: 1345px) {
     grid-template-columns: 704 1fr;
     padding: 0 3.75rem;
@@ -46,12 +46,12 @@
     grid-template-columns: 57% 1fr;
   }
   @media screen and (max-width: 767px) {
-    padding: 0 1rem;
     grid-template-columns: 1fr;
     grid-template-areas:
       "info"
       "stat"
       "image";
+    padding: 0 1rem;
   }
   &__info {
     grid-area: info;
@@ -76,15 +76,14 @@
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      padding-right: 40px;
-      padding-top: 52px;
-      margin-bottom: 40px;
+      padding: 52px 40px 0 0;
       font-family: "MuseoSansCyrl", sans-serif;
       font-size: 96px;
       font-weight: 700;
       line-height: 96px;
       text-align: left;
       background: url("../assets/images/arrow.png") right no-repeat;
+      margin-bottom: 40px;
       @media screen and (min-width: 1345px) {
         font-size: 120px;
         line-height: 120px;

@@ -3,7 +3,7 @@ import gallery from "../assets/data/gallery.js";
 </script>
 
 <template>
-  <div class="product">
+  <div class="product" id="product">
     <div class="product__intro">
       <h2 class="product__intro_title">Продукт</h2>
       <div class="product__intro_text content-text">
@@ -115,11 +115,11 @@ import gallery from "../assets/data/gallery.js";
     }
   }
   &__gallery {
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     row-gap: 80px;
+    margin: 0 auto;
     @media screen and (max-width: 767px) {
       grid-template-columns: 1fr;
       row-gap: 56px;
@@ -136,14 +136,14 @@ import gallery from "../assets/data/gallery.js";
 
 .item {
   display: grid;
-  grid-auto-flow: row;
   grid-template: auto 1fr auto/ 1fr;
+  grid-auto-flow: row;
   &__image {
-    margin-bottom: 1.5rem;
     border-radius: 64px;
+    margin-bottom: 1.5rem;
     @media screen and (max-width: 1024px) {
-      margin-bottom: 1rem;
       border-radius: 40px;
+      margin-bottom: 1rem;
     }
     @media screen and (max-width: 767px) {
       border-radius: 24px;
