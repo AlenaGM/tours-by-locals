@@ -80,6 +80,7 @@ const menu = [
     #231e1b;
   border-radius: 0px 0px 80px 80px;
   padding: 2rem 1.5rem 0;
+  z-index: 3;
   @media screen and (min-width: 1345px) {
     padding: 2rem 3.75rem 0;
     min-height: 1000px;
@@ -181,7 +182,7 @@ const menu = [
     width: 198px;
     border-radius: 32px;
     padding: 28px 32px 32px 32px;
-    z-index: 2;
+    z-index: 4;
     right: 1.5rem;
     @media screen and (min-width: 1345px) {
       right: 3.75rem;
