@@ -54,6 +54,7 @@ const menu = [
         class="header__dropdown_link"
         :href="element.path"
         :key="i"
+        @click="isOpenedMobileMenu = false"
       >
         {{ element.name }}
       </a>
