@@ -94,6 +94,7 @@ import gallery from "../assets/data/gallery.js";
         display: block;
         width: 80px;
         height: 80px;
+        max-width: 100%;
         margin-right: 1rem;
         @media screen and (max-width: 767px) {
           width: 56px;
@@ -157,6 +158,7 @@ import gallery from "../assets/data/gallery.js";
       display: block;
       width: 48px;
       height: 48px;
+      max-width: 100%;
       margin-right: 1rem;
       @media screen and (max-width: 1024px) {
         width: 40px;

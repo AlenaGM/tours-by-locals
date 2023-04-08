@@ -76,7 +76,7 @@ const menu = [
 .header {
   display: grid;
   grid-template: minmax(48px, auto) 1fr/ 1fr;
-  background: url(../assets/images/bg_image_1.png) 100% 100% / cover no-repeat,
+  background: url(../assets/images/bg_image_1.jpg) 100% 100% / cover no-repeat,
     #231e1b;
   border-radius: 0px 0px 80px 80px;
   padding: 2rem 1.5rem 0;
@@ -86,7 +86,7 @@ const menu = [
   }
   @media screen and (max-width: 767px) {
     grid-template: minmax(40px, auto) 1fr/ 1fr;
-    background: url(../assets/images/bg_image_1_mobile.png) 100% 100% / cover
+    background: url(../assets/images/bg_image_1_mobile.jpg) 100% 100% / cover
         no-repeat,
       #231e1b;
     border-radius: 0px 0px 24px 24px;
@@ -103,6 +103,7 @@ const menu = [
       img {
         display: block;
         height: 32px;
+        max-width: 100%;
         @media screen and (max-width: 767px) {
           height: 20px;
         }

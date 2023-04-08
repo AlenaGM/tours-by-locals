@@ -113,6 +113,7 @@ import guides from "../assets/data/guides.js";
       transition: all 0.5s ease-out;
       img {
         border-radius: 40px;
+        max-width: 100%;
         @media screen and (max-width: 1024px) {
           border-radius: 32px;
         }

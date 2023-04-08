@@ -14,14 +14,14 @@
 .aliens {
   display: grid;
   justify-items: center;
-  background: url(../assets/images/bg_image_4.png) bottom/100% auto no-repeat;
+  background: url(../assets/images/bg_image_4.jpg) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
   padding: 0 1.5rem 1rem;
   @media screen and (min-width: 1345px) {
     padding: 0 3.75rem 1rem;
   }
   @media screen and (max-width: 767px) {
-    background: url(../assets/images/bg_image_4_mobile.png) bottom/100% auto
+    background: url(../assets/images/bg_image_4_mobile.jpg) bottom/100% auto
       no-repeat;
     border-radius: 0px 0px 24px 24px;
     padding: 0 1rem 0.5rem;

@@ -34,7 +34,7 @@
     "content advantage";
   grid-template-columns: 50% 1fr;
   justify-items: start;
-  background: url(../assets/images/bg_image_3.png) bottom/100% auto no-repeat;
+  background: url(../assets/images/bg_image_3.jpg) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
   padding: 0 1.5rem;
   @media screen and (min-width: 1345px) {
@@ -47,7 +47,7 @@
       "content"
       "advantage";
     grid-template-columns: 1fr;
-    background: url(../assets/images/bg_image_3_mobile.png) bottom/100% auto
+    background: url(../assets/images/bg_image_3_mobile.jpg) bottom/100% auto
       no-repeat;
     border-radius: 0px 0px 24px 24px;
     padding: 0 1rem;

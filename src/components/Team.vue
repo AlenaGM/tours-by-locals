@@ -18,12 +18,12 @@
     </div>
     <div class="team__image">
       <picture>
-        <source media="(min-width:768px)" srcset="../assets/images/team.png" />
+        <source media="(min-width:768px)" srcset="../assets/images/team.jpg" />
         <source
           media="(max-width:767px)"
-          srcset="../assets/images/team_mobile.png"
+          srcset="../assets/images/team_mobile.jpg"
         />
-        <img src="../assets/images/team.png" alt="team" />
+        <img src="../assets/images/team.jpg" alt="team" />
       </picture>
     </div>
   </div>
@@ -82,7 +82,7 @@
       font-weight: 700;
       line-height: 96px;
       text-align: left;
-      background: url("../assets/images/arrow.png") right no-repeat;
+      background: url("../assets/images/arrow.jpg") right no-repeat;
       margin-bottom: 40px;
       @media screen and (min-width: 1345px) {
         font-size: 120px;
@@ -90,7 +90,11 @@
       }
       @media screen and (max-width: 767px) {
         margin: 0 0 2rem;
-        padding-top: 48px;
+        padding: 24px 16px 0 0;
+        font-size: 56px;
+        line-height: 56px;
+        background: url("../assets/images/arrow_mobile.jpg") right/48px
+          no-repeat;
       }
       span {
         font-size: 24px;

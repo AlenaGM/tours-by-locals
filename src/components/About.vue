@@ -47,7 +47,7 @@
       #ffffff 27.16%,
       rgba(255, 255, 255, 0) 56.09%
     ),
-    url(../assets/images/bg_image_2.png) bottom/100% auto no-repeat;
+    url(../assets/images/bg_image_2.jpg) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
   padding: 0 1.5rem;
   @media screen and (min-width: 1345px) {
@@ -59,7 +59,7 @@
         #ffffff 0%,
         rgba(255, 255, 255, 0) 56.09%
       ),
-      url(../assets/images/bg_image_2_mobile.png) bottom/100% auto no-repeat;
+      url(../assets/images/bg_image_2_mobile.jpg) bottom/100% auto no-repeat;
     border-radius: 0px 0px 24px 24px;
     padding: 0 1rem;
   }
@@ -123,8 +123,9 @@
       @media screen and (max-width: 767px) {
         font-size: 56px;
         line-height: 56px;
-        background: url("../assets/images/arrow.png") right/48px no-repeat;
-        padding: 24px 24px 0 0;
+        background: url("../assets/images/arrow_mobile.png") right/48px
+          no-repeat;
+        padding: 24px 16px 0 0;
       }
       span {
         font-size: 24px;

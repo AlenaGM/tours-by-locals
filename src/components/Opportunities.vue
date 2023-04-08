@@ -35,7 +35,7 @@
 <style lang="scss" scoped>
 .opportunities {
   display: grid;
-  background: url(../assets/images/bg_image_5.png) bottom/100% auto no-repeat;
+  background: url(../assets/images/bg_image_5.jpg) bottom/100% auto no-repeat;
   border-radius: 0px 0px 80px 80px;
   padding: 0 134px 0 1.5rem;
   @media screen and (min-width: 1345px) {
@@ -45,7 +45,7 @@
     padding: 0 107px 0 1.5rem;
   }
   @media screen and (max-width: 767px) {
-    background: url(../assets/images/bg_image_5_mobile.png) bottom/100% auto
+    background: url(../assets/images/bg_image_5_mobile.jpg) bottom/100% auto
       no-repeat;
     border-radius: 0px 0px 24px 24px;
     padding: 0 46px 0 1rem;
