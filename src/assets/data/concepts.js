@@ -27,7 +27,7 @@ const concepts = [
     id: "conc05",
     info: "Помогаем и поддерживаем друг друга для достижения общего результата",
     image: "/tripster/images/concept_img_5.png",
-    mobileImage: "/images/concept_img_5_mobile.png",
+    mobileImage: "/tripster/images/concept_img_5_mobile.png",
   },
 ];
 
