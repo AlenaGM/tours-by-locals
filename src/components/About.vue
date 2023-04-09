@@ -101,6 +101,7 @@
       margin-bottom: 56px;
     }
     @media screen and (max-width: 767px) {
+      max-width: 480px;
       justify-content: flex-start;
       justify-self: flex-start;
       margin-bottom: 40px;
@@ -114,18 +115,31 @@
       font-weight: 700;
       line-height: 96px;
       text-align: left;
-      background: url("../assets/images/arrow.png") right no-repeat;
-      padding: 52px 40px 0 0;
+      padding-top: 24px;
+      position: relative;
       @media screen and (min-width: 1345px) {
         font-size: 120px;
         line-height: 120px;
       }
       @media screen and (max-width: 767px) {
+        padding-top: 16px;
         font-size: 56px;
         line-height: 56px;
-        background: url("../assets/images/arrow_mobile.png") right/48px
-          no-repeat;
-        padding: 24px 16px 0 0;
+      }
+      &::before {
+        content: "";
+        z-index: 1;
+        position: absolute;
+        right: -16px;
+        top: 0;
+        background: url("../assets/images/arrow.png") center/100% auto no-repeat;
+        width: 85px;
+        height: 80px;
+        @media screen and (max-width: 767px) {
+          width: 51px;
+          height: 48px;
+          right: -9.6px;
+        }
       }
       span {
         font-size: 24px;
@@ -139,12 +153,12 @@
         }
       }
       &:not(:last-of-type) {
-        margin-right: 40px;
+        margin-right: 80px;
         @media screen and (min-width: 1345px) {
-          margin-right: 56px;
+          margin-right: 88px;
         }
         @media screen and (max-width: 767px) {
-          margin-right: 1rem;
+          margin-right: 40px;
         }
       }
     }

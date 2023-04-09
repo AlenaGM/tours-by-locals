@@ -197,8 +197,6 @@ const menu = [
     }
   }
   &__dropdown {
-    position: absolute;
-    top: 88px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -210,9 +208,11 @@ const menu = [
     border-radius: 32px;
     padding: 28px 32px 32px 32px;
     z-index: 4;
+    position: fixed;
+    top: 88px;
     right: 1.5rem;
     @media screen and (min-width: 1345px) {
-      right: 3.75rem;
+      right: calc((100vw - 1344px) / 2 + 60px);
     }
     @media screen and (max-width: 767px) {
       top: 64px;
