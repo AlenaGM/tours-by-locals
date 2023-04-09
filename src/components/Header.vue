@@ -27,7 +27,17 @@ const menu = [
     <nav class="header__navbar">
       <div class="header__navbar_logo">
         <a href="#">
-          <img alt="Tipster logo" src="../assets/images/logo.svg" />
+          <picture>
+            <source
+              media="(min-width:768px)"
+              srcset="../assets/images/logo.svg"
+            />
+            <source
+              media="(max-width:767px)"
+              srcset="../assets/images/logo_mobile.svg"
+            />
+            <img src="../assets/images/logo.svg" alt="Tipster logo" />
+          </picture>
         </a>
       </div>
 
@@ -107,7 +117,8 @@ const menu = [
       display: flex;
       align-items: center;
       cursor: pointer;
-      img {
+      img,
+      picture {
         display: block;
         height: 32px;
         max-width: 100%;
