@@ -139,6 +139,9 @@ import gallery from "../assets/data/gallery.js";
   display: grid;
   grid-template: auto 1fr auto/ 1fr;
   grid-auto-flow: row;
+  a:hover {
+    transform: scale(1.025);
+  }
   &__image {
     border-radius: 64px;
     margin-bottom: 1.5rem;

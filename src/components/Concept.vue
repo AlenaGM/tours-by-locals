@@ -74,12 +74,17 @@ import concepts from "../assets/data/concepts.js";
       padding: 40px;
       @media screen and (max-width: 1024px) {
         border-radius: 32px;
+        padding: 32px;
+      }
+      @media screen and (max-width: 767px) {
+        padding: 24px;
       }
       p {
         text-align: left;
         padding-right: 15%;
         @media screen and (max-width: 767px) {
           padding-bottom: 1.5rem;
+          padding-right: 0;
         }
       }
       div {

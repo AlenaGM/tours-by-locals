@@ -153,12 +153,16 @@ import guides from "../assets/data/guides.js";
         font-weight: 400;
         line-height: 17px;
         color: var(--color-white);
+        @media screen and (max-width: 767px) {
+          font-size: 12px;
+          line-height: 16px;
+        }
       }
       div:first-of-type {
         display: inline-flex;
         margin-bottom: 0.5rem;
         @media screen and (max-width: 767px) {
-          margin-bottom: 0.25rem;
+          margin-bottom: 0;
         }
         p {
           font-weight: 700;
