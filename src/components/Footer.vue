@@ -2,7 +2,12 @@
 
 <template>
   <footer class="footer">
-    <a href="#" target="_blank" rel="noopener noreferrer">Присоединяйся</a>
+    <a
+      href="https://jobs.friend.work/68867469BE63840C92B96047B6EFB174"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Присоединяйся</a
+    >
     <div>© 2013–2023, Tripster Limited</div>
   </footer>
 </template>

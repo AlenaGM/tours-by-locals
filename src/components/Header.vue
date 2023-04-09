@@ -33,7 +33,12 @@ const menu = [
 
       <div class="header__navbar_menu">
         <div>
-          <a href="#">Вакансии</a>
+          <a
+            href="https://jobs.friend.work/68867469BE63840C92B96047B6EFB174"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Вакансии</a
+          >
         </div>
         <div
           class="menu_open"
@@ -113,6 +118,16 @@ const menu = [
     }
     &_menu {
       display: inline-flex;
+      position: fixed;
+      top: 2rem;
+      right: 1.5rem;
+      @media screen and (min-width: 1345px) {
+        right: calc((100vw - 1344px) / 2 + 60px);
+      }
+      @media screen and (max-width: 767px) {
+        top: 1rem;
+        right: 1rem;
+      }
       div {
         display: flex;
         flex-direction: column;

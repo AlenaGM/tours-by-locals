@@ -82,7 +82,7 @@
       font-weight: 700;
       line-height: 96px;
       text-align: left;
-      background: url("../assets/images/arrow.jpg") right no-repeat;
+      background: url("../assets/images/arrow.png") right no-repeat;
       margin-bottom: 40px;
       @media screen and (min-width: 1345px) {
         font-size: 120px;
@@ -90,10 +90,10 @@
       }
       @media screen and (max-width: 767px) {
         margin: 0 0 2rem;
-        padding: 24px 16px 0 0;
+        padding: 32px 16px 0 0;
         font-size: 56px;
         line-height: 56px;
-        background: url("../assets/images/arrow_mobile.jpg") right/48px
+        background: url("../assets/images/arrow_mobile.png") right/48px
           no-repeat;
       }
       span {
