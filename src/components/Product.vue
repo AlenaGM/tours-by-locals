@@ -26,9 +26,9 @@ import gallery from "../assets/data/gallery.js";
         v-for="item in gallery"
         :key="item.id"
       >
-        <div>
+        <a :href="item.path" target="_blank" rel="noopener noreferrer">
           <img class="item__image" :src="item.image" :alt="item.name" />
-        </div>
+        </a>
         <div class="item__author">
           <img :src="item.authorImg" :alt="item.author" />
           <p>{{ item.author }}</p>
