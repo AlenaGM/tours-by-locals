@@ -20,4 +20,4 @@ _Landing for a company offering platform that connects tourists with local guide
 <img width="30%" alt="screen capture" src="../main/src/assets/images/capture-three.jpeg">
 <br><br>
 
-[Tours by Locals]: https://alenagm.github.io/tripster/
+[tours by locals]: https://alenagm.github.io/tours-by-locals/
