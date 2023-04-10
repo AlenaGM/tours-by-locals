@@ -2,6 +2,10 @@
 import { ref } from "vue";
 const isOpenedMobileMenu = ref(false);
 
+const onClickAway = () => {
+  isOpenedMobileMenu.value = false;
+};
+
 const menu = [
   {
     name: "Компания",
@@ -63,7 +67,11 @@ const menu = [
       </div>
     </nav>
 
-    <div class="header__dropdown" v-if="isOpenedMobileMenu">
+    <div
+      class="header__dropdown"
+      v-if="isOpenedMobileMenu"
+      v-click-away="onClickAway"
+    >
       <a
         v-for="(element, i) of menu"
         class="header__dropdown_link"
