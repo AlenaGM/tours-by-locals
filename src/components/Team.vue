@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div class="team" id="team">
     <div class="team__info">

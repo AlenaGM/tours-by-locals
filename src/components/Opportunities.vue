@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div class="opportunities" id="opportunities">
     <h2 class="opportunities__title">Возможности</h2>

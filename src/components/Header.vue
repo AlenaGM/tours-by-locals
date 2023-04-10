@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+
 const isOpenedMobileMenu = ref(false);
 
 const onClickAway = () => {

@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div class="mission">
     <h3 class="mission__title">
