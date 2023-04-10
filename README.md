@@ -1,29 +1,23 @@
-# tipster
+# Tours by Local Guides ⛩️🗽🏰
 
-This template should help get you started developing with Vue 3 in Vite.
+_Landing for a company offering platform that connects tourists with local guides._ <br>
 
-## Recommended IDE Setup
+## Tech stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Vue3 + Vite<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; Composition API<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&check;&nbsp;&nbsp; SASS<br>
 
-## Customize configuration
+## Demo
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[Tours by Locals]
 
-## Project Setup
+## Result
 
-```sh
-npm install
-```
+<br><br>
+<img width="30%" alt="screen capture" src="../main/src/assets/images/capture-one.jpeg">
+<img width="30%" alt="screen capture" src="../main/src/assets/images/capture-two.jpeg">
+<img width="30%" alt="screen capture" src="../main/src/assets/images/capture-three.jpeg">
+<br><br>
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+[Tours by Locals]: https://alenagm.github.io/tripster/
