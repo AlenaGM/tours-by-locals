@@ -27,7 +27,7 @@
   a {
     font-family: "MuseoSansCyrl", sans-serif;
     font-size: 80px;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 88px;
     margin-bottom: 184px;
     display: inline-flex;

@@ -165,7 +165,7 @@ import guides from "../assets/data/guides.js";
           margin-bottom: 0;
         }
         p {
-          font-weight: 700;
+          font-weight: 900;
           padding: 0 5px;
         }
       }
