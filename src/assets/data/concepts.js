@@ -26,7 +26,7 @@ const concepts = [
   {
     id: "conc05",
     info: "Помогаем и поддерживаем друг друга для достижения общего результата",
-    image: "/tours-by-localsimages/concept_img_5.png",
+    image: "/tours-by-locals/images/concept_img_5.png",
     mobileImage: "/tours-by-locals/images/concept_img_5_mobile.png",
   },
 ];

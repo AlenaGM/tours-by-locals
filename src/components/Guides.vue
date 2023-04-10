@@ -121,9 +121,6 @@ import guides from "../assets/data/guides.js";
           border-radius: 16px;
         }
       }
-      &:hover p {
-        color: var(--color-hover);
-      }
     }
     &_item:last-of-type {
       @media screen and (max-width: 1024px) {
