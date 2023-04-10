@@ -35,11 +35,6 @@
     background: url(../assets/images/footer_arrow.svg) right 60% /26px 42px no-repeat;
     padding-right: 50px;
     margin-right: 20px;
-    &:hover {
-      color: var(--color-hover);
-      background: url(../assets/images/footer_arrow_hover.svg) right 60% /26px 42px
-        no-repeat;
-    }
     @media screen and (max-width: 1024px) {
       font-size: 64px;
     }
@@ -49,6 +44,15 @@
       background-size: 12px 20px;
       padding-right: 20px;
       margin-bottom: 80px;
+    }
+    &:hover {
+      color: var(--color-hover);
+      background: url(../assets/images/footer_arrow_hover.svg) right 60% /26px 42px
+        no-repeat;
+      @media screen and (max-width: 767px) {
+        background-size: 12px 20px;
+        padding-right: 20px;
+      }
     }
   }
   div {
