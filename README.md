@@ -1,6 +1,6 @@
 # Tours by Local Guides ⛩️🗽🏰
 
-_Landing for a company offering platform that connects tourists with local guides._ <br>
+_Landing for a company offering platform that connects tourists with local guides_ <br>
 
 ## Tech stack
 
