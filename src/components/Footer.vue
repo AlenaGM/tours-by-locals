@@ -6,8 +6,10 @@
       href="https://jobs.friend.work/68867469BE63840C92B96047B6EFB174"
       target="_blank"
       rel="noopener noreferrer"
-      >Присоединяйся</a
-    >
+      >Присоединяйся<span>
+        <font-awesome-icon :icon="['fas', 'angle-right']"
+      /></span>
+    </a>
     <div>© 2013–2023, Tripster Limited</div>
   </footer>
 </template>
@@ -32,9 +34,11 @@
     margin-bottom: 184px;
     display: inline-flex;
     align-items: flex-end;
-    background: url(../assets/images/footer_arrow.svg) right 60% /26px 42px no-repeat;
-    padding-right: 50px;
-    margin-right: 20px;
+    gap: 12px;
+    span {
+      top: 8px;
+      font-size: 56px;
+    }
     @media screen and (max-width: 1024px) {
       font-size: 64px;
     }
@@ -44,15 +48,6 @@
       background-size: 12px 20px;
       padding-right: 20px;
       margin-bottom: 80px;
-    }
-    &:hover {
-      color: var(--color-hover);
-      background: url(../assets/images/footer_arrow_hover.svg) right 60% /26px 42px
-        no-repeat;
-      @media screen and (max-width: 767px) {
-        background-size: 12px 20px;
-        padding-right: 20px;
-      }
     }
   }
   div {

@@ -29,8 +29,8 @@ const menu = [
 
 <template>
   <header class="header" id="#header">
-    <nav class="header__navbar">
-      <div class="header__navbar_logo">
+    <nav class="header_navbar">
+      <div class="header_navbar__logo">
         <a href="#">
           <picture>
             <source
@@ -45,8 +45,7 @@ const menu = [
           </picture>
         </a>
       </div>
-
-      <div class="header__navbar_menu">
+      <div class="header_navbar__menu">
         <div>
           <a
             href="https://jobs.friend.work/68867469BE63840C92B96047B6EFB174"
@@ -58,33 +57,31 @@ const menu = [
         <div
           class="menu_open"
           v-if="!isOpenedMobileMenu"
-          @click="isOpenedMobileMenu = !isOpenedMobileMenu"
-        />
-        <div
-          class="menu_close"
-          v-else
-          @click="isOpenedMobileMenu = !isOpenedMobileMenu"
-        />
+          @click="isOpenedMobileMenu = true"
+        >
+          <font-awesome-icon :icon="['fas', 'bars']" />
+        </div>
+        <div class="menu_close" v-else @click="isOpenedMobileMenu = false">
+          <font-awesome-icon :icon="['fas', 'xmark']" />
+        </div>
       </div>
     </nav>
-
-    <div
-      class="header__dropdown"
-      v-if="isOpenedMobileMenu"
-      v-click-away="onClickAway"
-    >
-      <a
-        v-for="(element, i) of menu"
-        class="header__dropdown_link"
-        :href="element.path"
-        :key="i"
-        @click="isOpenedMobileMenu = false"
-      >
-        {{ element.name }}
-      </a>
-    </div>
-
-    <div class="header__content">
+    <Transition name="dropdown">
+      <div class="header_dropdown__wrapper" v-if="isOpenedMobileMenu">
+        <div class="header_dropdown_content" v-click-away="onClickAway">
+          <a
+            v-for="(element, i) of menu"
+            class="header_dropdown__link"
+            :href="element.path"
+            :key="i"
+            @click="isOpenedMobileMenu = false"
+          >
+            {{ element.name }}
+          </a>
+        </div>
+      </div>
+    </Transition>
+    <div class="header_content">
       <h1>
         Работа <br />
         в Tripster
@@ -118,11 +115,11 @@ const menu = [
     border-radius: 0px 0px 24px 24px;
     padding: 1rem 1rem 0;
   }
-  &__navbar {
+  &_navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &_logo {
+    &__logo {
       display: flex;
       align-items: center;
       cursor: pointer;
@@ -136,7 +133,7 @@ const menu = [
         }
       }
     }
-    &_menu {
+    &__menu {
       display: inline-flex;
       position: fixed;
       top: 2rem;
@@ -180,57 +177,56 @@ const menu = [
         }
       }
       div:last-of-type {
+        font-size: 17px;
         width: 48px;
         @media screen and (max-width: 767px) {
           width: 40px;
+          font-size: 14px;
         }
-      }
-      .menu_open {
-        background: url(../assets/images/open.svg) center / 50% 50% no-repeat,
-          #00000012;
-        &:hover {
-          background: url(../assets/images/open_hover.svg) center / 50% 50%
-              no-repeat,
-            #00000012;
-        }
-      }
-      .menu_close {
-        background: url(../assets/images/close.svg) center / 50% 50% no-repeat,
-          #00000012;
-        &:hover {
-          background: url(../assets/images/close_hover.svg) center / 50% 50%
-              no-repeat,
-            #00000012;
+        @media (any-pointer: fine) {
+          svg {
+            transition: all 0.4s ease;
+            &:hover {
+              transition: all 0.4s ease;
+              color: var(--color-hover);
+              transform: scale(1.2);
+            }
+          }
         }
       }
     }
   }
-  &__dropdown {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: var(--color-black);
-    background-color: #00000012;
-    backdrop-filter: blur(15px);
-    width: 198px;
-    border-radius: 32px;
-    padding: 28px 32px 32px 32px;
-    z-index: 4;
-    position: fixed;
-    top: 88px;
-    right: 1.5rem;
-    @media screen and (min-width: 1345px) {
-      right: calc((100vw - 1344px) / 2 + 60px);
+  &_dropdown {
+    &__wrapper {
+      position: fixed;
+      top: 88px;
+      right: 1.5rem;
+      z-index: 4;
+      background-color: #00000012;
+      backdrop-filter: blur(15px);
+      width: 198px;
+      border-radius: 32px;
+      padding: 28px 32px 32px 32px;
+      @media screen and (min-width: 1345px) {
+        right: calc((100vw - 1344px) / 2 + 60px);
+      }
+      @media screen and (max-width: 767px) {
+        top: 64px;
+        right: 1rem;
+        width: 142px;
+        border-radius: 24px;
+        padding: 1rem;
+      }
     }
-    @media screen and (max-width: 767px) {
-      top: 64px;
-      right: 1rem;
-      width: 142px;
-      border-radius: 24px;
-      padding: 1rem;
+    &__content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      color: var(--color-black);
     }
-    &_link {
+    &__link {
       display: block;
       color: var(--color-black);
       text-decoration: none;
@@ -241,8 +237,10 @@ const menu = [
       @media screen and (max-width: 767px) {
         font-size: 14px;
       }
-      &:hover {
-        color: var(--color-hover);
+      @media (any-pointer: fine) {
+        &:hover {
+          color: var(--color-hover);
+        }
       }
       &:not(:last-of-type) {
         margin-bottom: 1rem;
@@ -252,8 +250,9 @@ const menu = [
       }
     }
   }
-  &__content {
+  &_content {
     margin-top: 2.5rem;
+    position: relative;
     @media screen and (max-width: 767px) {
       margin-top: 2rem;
     }
@@ -284,5 +283,17 @@ const menu = [
       }
     }
   }
+}
+
+.dropdown-enter-active,
+.dropdown-leave-active {
+  transition: all 0.7s ease;
+}
+
+.dropdown-enter-from,
+.dropdown-leave-to {
+  -webkit-transform: translateY(-48px);
+  transform: translateY(-48px);
+  opacity: 0;
 }
 </style>

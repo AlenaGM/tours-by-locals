@@ -1,13 +1,13 @@
 <script setup></script>
 
 <template>
-  <div class="aliens">
-    <div class="aliens__content content-text">
+  <section class="aliens">
+    <div class="aliens_content content-text">
       Мы такие же увлечённые путешественники и с удовольствием пользуемся
       Tрипстером сами и советуем его близким
     </div>
-    <div class="aliens__label">Даша, SMM-редактор</div>
-  </div>
+    <div class="aliens_label">Даша, SMM-редактор</div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -26,7 +26,7 @@
     border-radius: 0px 0px 24px 24px;
     padding: 0 1rem 0.5rem;
   }
-  &__content {
+  &_content {
     max-width: 800px;
     text-align: center;
     margin-bottom: calc(100vw * 0.56);
@@ -42,7 +42,7 @@
       margin-bottom: calc(100vw * 0.82);
     }
   }
-  &__label {
+  &_label {
     font-family: "MuseoSansCyrl", sans-serif;
     color: var(--color-black);
     font-size: 17px;

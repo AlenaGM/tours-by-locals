@@ -1,14 +1,15 @@
 <template>
-  <div class="opportunities" id="opportunities">
-    <h2 class="opportunities__title">Возможности</h2>
-    <div class="opportunities__intro">
+  <section class="opportunities">
+    <i id="opportunities" />
+    <h2 class="opportunities_title">Возможности</h2>
+    <div class="opportunities_intro">
       <p>
         Трипстер — современная и технологичная компания. У нас работают крутые
         профи из сфер IT и маркетинга, в компании которых можно постоянно
         учиться новому.
       </p>
     </div>
-    <ul class="opportunities__list">
+    <ul class="opportunities_list">
       <li>
         Предлагаем комфортный формат работы на удалёнке и гибкий график, уважаем
         work-life balance и всячески следим, чтобы наши коллеги не выгорали на
@@ -27,7 +28,7 @@
         рабочих процессов. Мы рады инициативным членам команды.
       </li>
     </ul>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -48,10 +49,10 @@
     border-radius: 0px 0px 24px 24px;
     padding: 0 46px 0 1rem;
   }
-  &__title {
+  &_title {
     text-align: left;
   }
-  &__intro {
+  &_intro {
     width: 75%;
     margin-bottom: 96px;
     @media screen and (min-width: 1345px) {
@@ -66,7 +67,7 @@
       margin-bottom: 40px;
     }
   }
-  &__list {
+  &_list {
     list-style: "★" outside;
     padding-left: 2rem;
     margin-bottom: 600px;

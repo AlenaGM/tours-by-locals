@@ -1,24 +1,23 @@
-<script setup></script>
-
 <template>
-  <div class="about" id="about">
-    <div class="about__intro">
-      <h2 class="about__intro_title">Компания</h2>
-      <div class="about__intro_text content-text">
+  <section class="about">
+    <i id="about" />
+    <div class="about_intro">
+      <h2 class="about_intro__title">Компания</h2>
+      <div class="about_intro__text content-text">
         С момента запуска компании в 2013 году мы стали одними из лидеров на
         рынке бронирования экскурсий
       </div>
     </div>
-    <div class="about__stat">
-      <div class="about__stat_item">
+    <div class="about_stat">
+      <div class="about_stat__item">
         669
         <span>городов</span>
       </div>
-      <div class="about__stat_item">
+      <div class="about_stat__item">
         99
         <span>стран</span>
       </div>
-      <div class="about__stat_item">
+      <div class="about_stat__item">
         {{
           new Intl.NumberFormat("ru-RU", {
             style: "decimal",
@@ -27,15 +26,19 @@
         <span>посетителей в месяц</span>
       </div>
     </div>
-    <div class="about__content">
+    <div class="about_content">
       <p>
         Трипстер — это бизнес с человеческим лицом, который делает продукт про
         людей и для людей. Мы не просто продаём экскурсии, а выбираем для
         путешественников лучшее.
       </p>
     </div>
-    <div><a class="about__arrow-up" href="#" /></div>
-  </div>
+    <div>
+      <a class="about_arrow-up" href="#"
+        ><font-awesome-icon :icon="['fas', 'angle-up']"
+      /></a>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -63,8 +66,8 @@
     border-radius: 0px 0px 24px 24px;
     padding: 0 1rem;
   }
-  &__intro {
-    &_title {
+  &_intro {
+    &__title {
       margin-bottom: 1.5rem;
       @media screen and (max-width: 1024px) {
         margin-bottom: 1rem;
@@ -73,7 +76,7 @@
         text-align: left;
       }
     }
-    &_text {
+    &__text {
       width: 800px;
       margin-bottom: 72px;
       @media screen and (min-width: 1345px) {
@@ -89,7 +92,7 @@
       }
     }
   }
-  &__stat {
+  &_stat {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -106,7 +109,7 @@
       justify-self: flex-start;
       margin-bottom: 40px;
     }
-    &_item {
+    &__item {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -163,7 +166,7 @@
       }
     }
   }
-  &__content {
+  &_content {
     display: grid;
     width: 51%;
     justify-self: end;
@@ -189,20 +192,22 @@
       margin-bottom: calc(100vw * 0.83);
     }
   }
-  &__arrow-up {
+  &_arrow-up {
     z-index: 2;
+    font-size: 32px;
     color: var(--color-black);
     background-color: #00000012;
     backdrop-filter: blur(15px);
     border-radius: 100px;
     cursor: pointer;
-    background: url(../assets/images/up_arrow.svg) center / 50% 50% no-repeat,
-      #00000012;
     height: 48px;
     width: 48px;
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media screen and (min-width: 1345px) {
       right: calc((100vw - 1344px) / 2 + 60px);
     }
@@ -211,11 +216,12 @@
       width: 40px;
       right: 1rem;
       bottom: 1rem;
+      font-size: 28px;
     }
-    &:hover {
-      background: url(../assets/images/up_arrow_hover.svg) center / 50% 50%
-          no-repeat,
-        #00000012;
+    @media (any-pointer: fine) {
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }

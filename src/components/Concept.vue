@@ -3,19 +3,19 @@ import concepts from "../assets/data/concepts.js";
 </script>
 
 <template>
-  <div class="concept">
+  <section class="concept">
     <h3>
       <span>Наш главный принцип работы —</span> открытость и возможность каждого
       члена команды менять процессы в компании
     </h3>
-    <div class="concept__intro">
+    <div class="concept_intro">
       У нас нет босса и подчинённых, а люди в команде — не просто ресурс. В
       Трипстере каждый заряжен общей идеей — делать качественный и полезный
       продукт для путешествий. И в этом ценность общего дела для нас.
     </div>
-    <div class="concept__gallery">
+    <div class="concept_gallery">
       <div
-        class="concept__gallery_item"
+        class="concept_gallery__item"
         v-for="concept in concepts"
         :key="concept.id"
       >
@@ -29,7 +29,7 @@ import concepts from "../assets/data/concepts.js";
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -42,7 +42,7 @@ import concepts from "../assets/data/concepts.js";
   @media screen and (max-width: 767px) {
     padding: 0 1rem;
   }
-  &__intro {
+  &_intro {
     margin-bottom: 112px;
     @media screen and (max-width: 1024px) {
       margin-bottom: 80px;
@@ -51,7 +51,7 @@ import concepts from "../assets/data/concepts.js";
       margin-bottom: 40px;
     }
   }
-  &__gallery {
+  &_gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(476px, 1fr));
     grid-auto-rows: 1fr;
@@ -64,7 +64,7 @@ import concepts from "../assets/data/concepts.js";
       grid-template-columns: 1fr;
       gap: 1rem;
     }
-    &_item {
+    &__item {
       display: grid;
       grid-template: 1fr auto / 1fr;
       grid-auto-flow: row;
@@ -102,7 +102,7 @@ import concepts from "../assets/data/concepts.js";
         }
       }
     }
-    &_item:last-of-type {
+    &__item:last-of-type {
       @media screen and (min-width: 768px) {
         grid-column: span 2;
         display: grid;

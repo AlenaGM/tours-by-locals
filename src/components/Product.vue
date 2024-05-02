@@ -3,16 +3,17 @@ import gallery from "../assets/data/gallery.js";
 </script>
 
 <template>
-  <div class="product" id="product">
-    <div class="product__intro">
-      <h2 class="product__intro_title">Продукт</h2>
-      <div class="product__intro_text content-text">
+  <section class="product">
+    <i id="product" />
+    <div class="product_intro">
+      <h2 class="product_intro__title">Продукт</h2>
+      <div class="product_intro__text content-text">
         «Мы делаем полезный и удобный сервис для путешественников и находим
         экскурсии, которые становятся уникальным опытом встречи с другими
         людьми, возможностью соприкоснуться с их мировоззрением, с местами, про
         которые даже не мог подумать и представить»
       </div>
-      <div class="product__intro_ceo">
+      <div class="product_intro__ceo">
         <img src="../assets/images/ceo.png" alt="tipster's ceo" />
         <div>
           <p>Алексей Мельчаков</p>
@@ -20,24 +21,24 @@ import gallery from "../assets/data/gallery.js";
         </div>
       </div>
     </div>
-    <div class="product__gallery">
+    <div class="product_gallery">
       <div
-        class="product__gallery_item item"
+        class="product_gallery__item item"
         v-for="item in gallery"
         :key="item.id"
       >
         <a :href="item.path" target="_blank" rel="noopener noreferrer">
-          <img class="item__image" :src="item.image" :alt="item.name" />
+          <img class="item_image" :src="item.image" :alt="item.name" />
         </a>
-        <div class="item__author">
+        <div class="item_author">
           <img :src="item.authorImg" :alt="item.author" />
           <p>{{ item.author }}</p>
         </div>
-        <div class="item__info">
+        <div class="item_info">
           <p>{{ item.info }}</p>
         </div>
         <a
-          class="item__link"
+          class="item_link"
           :href="item.path"
           target="_blank"
           rel="noopener noreferrer"
@@ -45,7 +46,7 @@ import gallery from "../assets/data/gallery.js";
         >
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -57,20 +58,20 @@ import gallery from "../assets/data/gallery.js";
   @media screen and (max-width: 767px) {
     padding: 0 1rem;
   }
-  &__intro {
+  &_intro {
     display: grid;
     justify-items: center;
     margin-bottom: 335px;
     @media screen and (max-width: 767px) {
       margin-bottom: 48px;
     }
-    &_title {
+    &__itle {
       margin-bottom: 1.5rem;
       @media screen and (max-width: 1024px) {
         margin-bottom: 1rem;
       }
     }
-    &_text {
+    &__text {
       width: 83%;
       max-width: none;
       text-align: center;
@@ -87,7 +88,7 @@ import gallery from "../assets/data/gallery.js";
         margin-bottom: 1.5rem;
       }
     }
-    &_ceo {
+    &__ceo {
       display: inline-flex;
       align-items: center;
       img {
@@ -115,7 +116,7 @@ import gallery from "../assets/data/gallery.js";
       }
     }
   }
-  &__gallery {
+  &_gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
@@ -125,7 +126,7 @@ import gallery from "../assets/data/gallery.js";
       grid-template-columns: 1fr;
       row-gap: 56px;
     }
-    &_item:nth-of-type(odd) {
+    &__item:nth-of-type(odd) {
       position: relative;
       top: -215px;
       @media screen and (max-width: 767px) {
@@ -139,10 +140,14 @@ import gallery from "../assets/data/gallery.js";
   display: grid;
   grid-template: auto 1fr auto/ 1fr;
   grid-auto-flow: row;
-  a:hover {
-    transform: scale(1.025);
+  transition: all 0.4s ease;
+  @media (any-pointer: fine) {
+    a:hover {
+      transform: scale(1.025);
+      transition: all 0.4s ease;
+    }
   }
-  &__image {
+  &_image {
     border-radius: 64px;
     margin-bottom: 1.5rem;
     @media screen and (max-width: 1024px) {
@@ -153,7 +158,7 @@ import gallery from "../assets/data/gallery.js";
       border-radius: 24px;
     }
   }
-  &__author {
+  &_author {
     display: inline-flex;
     align-items: center;
     margin-bottom: 1rem;
@@ -172,15 +177,15 @@ import gallery from "../assets/data/gallery.js";
       font-weight: 600;
     }
   }
-  &__info {
+  &_info {
     margin-bottom: 1rem;
     @media screen and (max-width: 767px) {
       margin-bottom: 0.5rem;
     }
   }
-  &__author,
-  &__link,
-  &__info {
+  &_author,
+  &_link,
+  &_info {
     padding-left: 2rem;
     width: 83%;
     @media screen and (max-width: 1024px) {

@@ -1,20 +1,21 @@
 <template>
-  <div class="team" id="team">
-    <div class="team__info">
-      <h2 class="team__title">Команда</h2>
+  <section class="team">
+    <i id="team" />
+    <div class="team_info">
+      <h2 class="team_title">Команда</h2>
       <p>
         У нас по-настоящему дружная команда. Мы регулярно проводим неофициальные
         встречи в московском офисе и придумываем форматы онлайн-встреч для того,
         чтобы не терять связь с ребятами на удалёнке из других городов и стран.
       </p>
     </div>
-    <div class="team__stat">
-      <div class="team__stat_item">
+    <div class="team_stat">
+      <div class="team_stat__item">
         124
         <span>человека</span>
       </div>
     </div>
-    <div class="team__image">
+    <div class="team_image">
       <picture>
         <source media="(min-width:768px)" srcset="../assets/images/team.jpg" />
         <source
@@ -24,7 +25,7 @@
         <img src="../assets/images/team.jpg" alt="team" />
       </picture>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -51,7 +52,7 @@
       "image";
     padding: 0 1rem;
   }
-  &__info {
+  &_info {
     grid-area: info;
     margin-bottom: 80px;
     @media screen and (max-width: 1024px) {
@@ -61,15 +62,15 @@
       margin-bottom: 0;
     }
   }
-  &__title {
+  &_title {
     text-align: left;
   }
-  &__stat {
+  &_stat {
     grid-area: stat;
     display: flex;
     justify-content: center;
     align-items: center;
-    &_item {
+    &__item {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -118,7 +119,7 @@
       }
     }
   }
-  &__image {
+  &_image {
     grid-area: image;
   }
 }

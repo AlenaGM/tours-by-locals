@@ -1,9 +1,9 @@
 <template>
-  <div class="mission">
-    <h3 class="mission__title">
+  <section class="mission">
+    <h3 class="mission_title">
       <span>Главная цель компании —</span> стать сервисом №1 в сфере путешествий
     </h3>
-    <div class="mission__content">
+    <div class="mission_content">
       <p>
         Хотим, чтобы Трипстер стал синонимом увлекательного и уникального опыта
         познания мира. Сегодня в нашей команде сотрудники с опытом работы в
@@ -15,13 +15,13 @@
         классный продукт, делиться своими знаниями и развиваться.
       </p>
     </div>
-    <div class="mission__advantage">
+    <div class="mission_advantage">
       Трипстер — это прибыльный бизнес, который полностью окупает себя, а
       значит, не зависит от сторонних инвесторов. Заработанные деньги
       инвестируются в дальнейший рост, так что даже в условиях нестабильной
       экономики мы развиваемся.
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -50,7 +50,7 @@
     border-radius: 0px 0px 24px 24px;
     padding: 0 1rem;
   }
-  &__title {
+  &_title {
     grid-area: title;
     width: 730px;
     margin-bottom: 4rem;
@@ -68,7 +68,7 @@
       margin-bottom: 1rem;
     }
   }
-  &__content {
+  &_content {
     grid-area: content;
     margin-bottom: calc(100vw * 0.47);
     @media screen and (min-width: 1345px) {
@@ -81,7 +81,7 @@
       margin-bottom: 1.5rem;
     }
   }
-  &__advantage {
+  &_advantage {
     grid-area: advantage;
     width: 61%;
     margin-left: auto;

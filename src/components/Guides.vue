@@ -3,22 +3,22 @@ import guides from "../assets/data/guides.js";
 </script>
 
 <template>
-  <div class="guides">
-    <h3 class="guides__title">
+  <section class="guides">
+    <h3 class="guides_title">
       Трипстер даёт людям возможность получать необычный опыт даже в рамках
       родного города
     </h3>
-    <div class="guides__intro">
+    <div class="guides_intro">
       Наш основной фокус — на гидах-личностях, которые буквально меняют
       отношение к привычному или открывают людям совсем неизвестное.
     </div>
-    <div class="guides__image">
+    <div class="guides_image">
       <img src="../assets/images/guides.png" alt="guides" />
     </div>
-    <div class="guides__gallery">
+    <div class="guides_gallery">
       <a
         v-for="guide in guides"
-        class="guides__gallery_item"
+        class="guides_gallery__item"
         :href="guide.path"
         target="_blank"
         rel="noopener noreferrer"
@@ -28,7 +28,7 @@ import guides from "../assets/data/guides.js";
         :location="guide.location"
       >
         <img :src="guide.image" :alt="guide.name" />
-        <div class="guides__gallery_guide">
+        <div class="guides_gallery__guide">
           <div>
             <p>{{ guide.name }}</p>
             <p>{{ guide.rating }}</p>
@@ -39,7 +39,7 @@ import guides from "../assets/data/guides.js";
         </div>
       </a>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
@@ -68,16 +68,16 @@ import guides from "../assets/data/guides.js";
     column-gap: 0;
     padding: 0 1rem;
   }
-  &__title {
+  &_title {
     grid-area: title;
   }
-  &__intro {
+  &_intro {
     grid-area: intro;
     @media screen and (max-width: 767px) {
       align-self: flex-start;
     }
   }
-  &__image {
+  &_image {
     grid-area: image;
     img {
       max-width: 242px;
@@ -92,7 +92,7 @@ import guides from "../assets/data/guides.js";
       }
     }
   }
-  &__gallery {
+  &_gallery {
     grid-area: gallery;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -106,7 +106,7 @@ import guides from "../assets/data/guides.js";
       gap: 1rem;
       margin: 56px auto 0;
     }
-    &_item {
+    &__item {
       position: relative;
       display: flex;
       justify-content: center;
@@ -122,7 +122,7 @@ import guides from "../assets/data/guides.js";
         }
       }
     }
-    &_item:last-of-type {
+    &__item:last-of-type {
       @media screen and (max-width: 1024px) {
         display: none;
       }
@@ -130,11 +130,11 @@ import guides from "../assets/data/guides.js";
         display: flex;
       }
     }
-    &_item:nth-of-type(even) {
+    &__item:nth-of-type(even) {
       position: relative;
       top: 40px;
     }
-    &_guide {
+    &__guide {
       position: absolute;
       display: flex;
       flex-direction: column;

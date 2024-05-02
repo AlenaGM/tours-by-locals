@@ -18,6 +18,10 @@
   position: relative;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   min-width: 320px;
@@ -141,15 +145,23 @@ a {
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
+  transition: all 0.4s ease;
   cursor: pointer;
-  &:hover {
-    text-decoration: none;
-    color: var(--color-hover);
-    transform: scale(1.05);
-  }
   @media screen and (max-width: 1024px) {
     font-size: 17px;
     line-height: 24px;
+  }
+  @media (any-pointer: fine) {
+    &:hover {
+      text-decoration: none;
+      color: var(--color-hover);
+      transform: scale(1.05);
+      transition: all 0.4s ease;
+    }
+    svg:hover {
+      color: var(--color-hover);
+      transition: all 0.4s ease;
+    }
   }
 }
 
@@ -176,6 +188,15 @@ p {
     &:not(:last-of-type) {
       padding-bottom: 1rem;
     }
+  }
+}
+
+i {
+  position: absolute;
+  top: calc(var(--section-gap) * -0.5);
+  opacity: 0;
+  @media screen and (max-width: 1023px), (orientation: portrait) {
+    top: calc(var(--section-gap-mobile) * -0.5);
   }
 }
 
