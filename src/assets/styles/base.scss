@@ -195,8 +195,8 @@ i {
   position: absolute;
   top: calc(var(--section-gap) * -0.5);
   opacity: 0;
-  @media screen and (max-width: 1023px), (orientation: portrait) {
-    top: calc(var(--section-gap-mobile) * -0.5);
+  @media screen and (max-width: 1024px) {
+    top: calc(var(--section-gap-mobile) * -0.9);
   }
 }
 
