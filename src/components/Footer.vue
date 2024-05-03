@@ -41,6 +41,11 @@
     }
     @media screen and (max-width: 1024px) {
       font-size: 64px;
+      gap: 8px;
+      span {
+        top: 6px;
+        font-size: 44px;
+      }
     }
     @media screen and (max-width: 767px) {
       font-size: 32px;
@@ -48,6 +53,11 @@
       background-size: 12px 20px;
       padding-right: 20px;
       margin-bottom: 80px;
+      gap: 4px;
+      span {
+        top: 4px;
+        font-size: 24px;
+      }
     }
   }
   div {
